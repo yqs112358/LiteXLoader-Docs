@@ -32,7 +32,7 @@
 虽然脚本语言通常是弱类型的，不需要关注具体的数据类型，但由于LiteXLoader支持多种不同的脚本语言，为了方便对接API，下面定义一些通用的数据类型。请你首先务必熟悉这些称呼的意思。  
 - `Null` - 空（未定义，不存在,无返回值等等）
 - `Integer` - 整数
-- `Float` - 浮点数（小数，实数）
+- `Float` - 浮点数（小数，实数）
 - `String` - 字符串
 - `ByteBuffer` - 字符数组（字节串，字符缓冲区）
 - `Boolean` - 布尔型
@@ -58,7 +58,7 @@
 在游戏中，数量众多的 API 都需要提供位置坐标。引擎采用 `IntPos` 和 `FloatPos` 类型的对象来标示坐标，称之为「位置坐标对象」。  
 1. `IntPos`对象
    它的成员均为**整数**，多用来表示**方块坐标**等用整数表示的位置  
-   对于一个 `IntPos` 类型变量 pos，有如下这些属性：  
+   对于一个 `IntPos` 类型变量 pos，有如下这些成员：  
 
    | 成员    | 含义   | 类型      |
    | ------- | ------ | --------- |
@@ -74,25 +74,18 @@
    
 
 2. `FloatPos`对象
-   它的x,y,z成员均为**实数**，多用来表示**实体坐标**等用实数表示的位置  
-   对于一个 `FloatPos` 类型变量 pos：  
+   它的x,y,z成员均为**浮点数**，多用来表示**实体坐标**等用无法用整数表示的位置  
+   对于一个 `FloatPos` 类型变量 pos，有如下这些成员：  
 
-    - 成员 `pos.x` : `Number`
+   | 成员    | 含义   | 类型      |
+   | ------- | ------ | --------- |
+   | pos.x   | x 坐标 | `Float`   |
+   | pos.y   | y 坐标 | `Float`   |
+   | pos.z   | z 坐标 | `Float`   |
+   | pos.dim | 维度   | `Integer` |
 
-       x坐标（实数）  
+   维度 pos.dim 的取值：0 主世界，1 下界，2 末地  
 
-    - 成员 `pos.y` : `Number`
-   
-    y坐标（实数）  
-   
-    - 成员 `pos.z` : `Number`
-   
-    z坐标（实数）  
-   
-    - 成员 `pos.dim` : `Number`
-   
-    维度（整数）：0 主世界，1 下界，2 末地
-   
     > 如果某种情况下维度无效，或者无法获取，你会发现`dim`的值为-1。
 
 
@@ -124,13 +117,19 @@
 - 参数：
   - cmd : `String`  
     待执行的命令  
-- 返回值：结果`Object` 
-  - 成员 result : `Boolean`  
-    表示是否执行成功  
-    
-  - 成员 output : `String`  
-    返回BDS执行命令后的输出结果  
+  
+- 返回值：命令执行结果`Object` 
+
+  对于一个执行结果对象res，有如下这些成员：
+
+  | 成员       | 含义                    | 类型      |
+  | ---------- | ----------------------- | --------- |
+  | res.result | 是否执行成功            | `Boolean` |
+  | res.output | BDS执行命令后的输出结果 | `String`  |
+
 - 返回值类型： `Object<Boolean,String>`
+
+> 注：runcmdEx 与普通 runcmd 实现区别非常大，在于 Ex 版本拥有**隐藏执行**的机制，执行结果不会输出至控制台，因此如果有需要，要手动用 log 函数将结果输出
 
 <br>
 
@@ -160,15 +159,19 @@
   - description : `String`  
     命令描述文本  
 
-  - level(可选参数) : `Number`  
-    命令的注册等级，默认为4  
-    0 : Normal  
-    1 : Privileged  
-    2 : AutomationPlayer  
-    3 : OperatorOnly  
-    4 : ConsoleOnly
+  - level(可选参数) : `Integer`  
+    命令的注册等级，默认为 0  
+    0 : 所有人都可以执行  
+    1 : 只有OP可以执行  
+    
+    4 : 只有后台控制台可以执行
+  
 - 返回值：是否成功注册
+
 - 返回值类型：`Boolean`
+
+> 也就是说，注册玩家命令和注册后台控制台命令用这一个 registerCmd 即可全部实现。  
+> 注册玩家命令使用等级0和1，注册控制台命令使用等级4
 
 <br>
 
@@ -191,7 +194,7 @@
 `log(data1,data2,...)` (Lua环境下别名：`print`)
 
 - 参数：
-    - dataN : `任意类型`  
+    - 
       待输出的变量或者数据  
       可以是任意类型，参数数量可以是任意个
 - 返回值：无
@@ -205,9 +208,8 @@
 `system.getTimeStr()`
 
 - 返回值：当前的时间字符串，使用当地时区和24小时制。  
-
   形如`2021-04-03 19:15:01`
-
+  
 - 返回值类型：`String`
 
 <br>
@@ -218,28 +220,20 @@
 
 `system.getTimeObj()`
 
-- 返回值：一个时间对象（`Object`）
-    - 成员 Y : `Number`  
-      年份数值（4位）  
-      
-    - 成员 M : `Number`  
-      月份数值
-      
-    - 成员 D : `Number`  
-      天数数值
-      
-    - 成员 h : `Number`  
-      小时数值（24小时制）
-      
-    - 成员 m : `Number`  
-      分钟数值
-      
-    - 成员 s : `Number`  
-      秒数值
-      
-    - 成员 ms : `Number`  
-    毫秒数值
-- 返回值类型： `Object<Number,Number,Number,Number,Number,Number,Number>`
+- 返回值：当前的时间对象（`Object`）  
+    对于一个时间对象tm，有如下这些成员：
+    
+    | 成员  | 含义                 | 类型      |
+    | ----- | -------------------- | --------- |
+    | tm.Y  | 年份数值（4位）      | `Integer` |
+    | tm.M  | 月份数值             | `Integer` |
+    | tm.D  | 天数数值             | `Integer` |
+    | tm.h  | 小时数值（24小时制） | `Integer` |
+    | tm.m  | 分钟数值             | `Integer` |
+    | tm.s  | 秒数值               | `Integer` |
+    | tm.ms | 毫秒数值             | `Integer` |
+    
+- 返回值类型： `Object<Integer,Integer,Integer,Integer,Integer,Integer,Integer>`
 
 <br>
 
@@ -251,10 +245,10 @@
     - func : `Function`  
       待执行的函数
 
-    - msec : `Number`  
+    - msec : `Integer`  
       推迟执行的时间（毫秒）
 - 返回值：此任务ID
-- 返回值类型：`Number`
+- 返回值类型：`Integer`
 > 推迟执行的函数可能与其他线程代码同时执行，使用时注意潜在的数据竞争和死锁问题  
 
 <br>
@@ -267,10 +261,10 @@
     - code : `String`  
       待执行的代码段
 
-    - msec : `Number`  
+    - msec : `Integer`  
       推迟执行的时间（毫秒）
 - 返回值：此任务ID
-- 返回值类型：`Number`
+- 返回值类型：`Integer`
 > 推迟执行的代码可能与其他线程代码同时执行，使用时注意潜在的数据竞争和死锁问题  
 
 <br>
@@ -282,10 +276,10 @@
     - func : `Function`  
       待执行的函数
 
-    - msec : `Number`  
+    - msec : `Integer`  
       执行间隔周期（毫秒）
 - 返回值：此任务ID
-- 返回值类型： `Number`
+- 返回值类型： `Integer`
 > 周期执行的函数可能与其他线程代码同时执行，使用时注意潜在的数据竞争和死锁问题  
 
 <br>
@@ -297,10 +291,10 @@
     - code : `String`  
       待执行的代码段
 
-    - msec : `Number`  
+    - msec : `Integer`  
       执行间隔周期（毫秒）
 - 返回值：此任务ID
-- 返回值类型： `Number`
+- 返回值类型： `Integer`
 > 周期执行的代码可能与其他线程代码同时执行，使用时注意潜在的数据竞争和死锁问题   
 
 <br>
@@ -309,7 +303,7 @@
 `cancelTask(taskid)` (Js环境下别名：`clearInterval`)
 
 - 参数：
-    - timerid : `Number`  
+    - timerid : `Integer`  
       由前几个函数返回的任务ID
 - 返回值：是否取消成功
 - 返回值类型： `Boolean`

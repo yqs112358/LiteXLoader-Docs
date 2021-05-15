@@ -13,8 +13,7 @@
 `file.read(path)`
 
 - 参数：
-    1. path : `String`
-    
+    - path : `String`  
       目标文件的路径，相对路径以BDS根目录为基准
 - 返回值：文件的所有数据
 - 返回值类型：`String`
@@ -22,19 +21,21 @@
 
 <br>
 
-### 清空指定文件的所有内容并写入
+### 向指定文件写入内容
 `file.write(path,text)`
 
 - 参数：
-    1. path : `String`
-    
+    - path : `String`  
       目标文件的路径，相对路径以BDS根目录为基准
-    
-    2. text : `String`
-    
+
+    - text : `String`  
       要写入的内容
+
 - 返回值：是否写入成功
+
 - 返回值类型：`Boolean`
+
+> 注：若文件不存在会自动创建，若存在则会先将其**清空**再写入
 
 <br>
 
@@ -42,12 +43,10 @@
 `file.writeLine(path,text)`
 
 - 参数：
-    1. path : `String`
-    
+    - path : `String`  
       目标文件的路径，相对路径以BDS根目录为基准
-    
-    2. text : `String`
-    
+
+    - text : `String`  
       要写入的内容
 - 返回值：是否写入成功
 - 返回值类型：`Boolean`
@@ -63,8 +62,7 @@
 `file.createDir(dir)`
 
 - 参数：
-    1. dir : `String`
-    
+    - dir : `String`  
       目标文件夹的路径  
       可以直接创建多层，不需要逐层创建
 - 返回值：是否成功创建
@@ -76,8 +74,7 @@
 `file.delete(path)`
 
 - 参数：
-    1. path : `String`
-    
+    - path : `String`  
       目标文件 / 文件夹的路径
 - 返回值：是否成功删除
 - 返回值类型：`Boolean`
@@ -88,8 +85,7 @@
 `file.exists(path)`
 
 - 参数：
-    1. path : `String`
-    
+    - path : `String`  
       目标文件 / 文件夹的路径
 - 返回值：目标是否存在
 - 返回值类型：`Boolean`
@@ -100,12 +96,10 @@
 `file.copy(from,to)`
 
 - 参数：
-    1. from : `String`
-    
+    - from : `String`  
       源文件 / 文件夹的路径
-    
-    2. to : `String`
-    
+
+    - to : `String`  
       目标文件 / 文件夹的位置
 - 返回值：是否复制成功
 - 返回值类型：`Boolean`
@@ -116,12 +110,10 @@
 `file.move(from,to)`
 
 - 参数：
-    1. from : `String`
-    
+    - from : `String`  
       源文件 / 文件夹的路径
-    
-    2. to : `String`
-    
+
+    - to : `String`  
       目标文件 / 文件夹的位置
 - 返回值：是否复制成功
 - 返回值类型：`Boolean`
@@ -132,12 +124,10 @@
 `file.rename(from,to)`
 
 - 参数：
-    1. from : `String`
-    
+    - from : `String`  
       文件 / 文件夹的旧名字
-    
-    2. to : `String`
-    
+
+    - to : `String`  
       新名字
 - 返回值：是否复制成功
 - 返回值类型：`Boolean`
@@ -152,19 +142,20 @@
 `system.cmd(cmd[,callback,timeLimit])`
 
 - 参数：
-    1. cmd : `String`
-    
+    - cmd : `String`  
       执行的系统命令
-    
-    2. callback(可选参数) : `Function`
-    
+
+    - callback(可选参数) : `Function`  
       命令执行的进程结束之后返回数据使用的回调函数  
       默认为`Null`，即不执行回调函数
-    
-    3. timeLimit(可选参数) : `Number`
-    
+
+    - timeLimit(可选参数) : `Integer`  
       运行命令进程运行的最长时间，默认为`-1`，即无限长
+
 - 返回值：是否成功启动命令
+
 - 返回值类型：`Boolean`
+
+> 此函数不会等待命令执行完后再返回，而是命令执行完后由引擎自动调用给出的回调函数来实现返回结果
 
 <br>

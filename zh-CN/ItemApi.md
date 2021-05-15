@@ -15,17 +15,11 @@
 
 每一个物品对象都包含一些固定的对象属性。对于某个特定的物品对象`it`，有以下这些属性
 
-- 属性 `it.name` : `String`
-  
-  物品名称
-  
-- 属性 `it.customName` : `String`
-  
-  物品的自定义名称（游戏内实际显示的名字）
-  
-- 属性 `it.count` : `Number`
-  
-  整数，这个物品对象堆叠的个数
+| 属性          | 含义                                     | 类型      |
+| ------------- | ---------------------------------------- | --------- |
+| it.name       | 物品名称                                 | `String`  |
+| it.customName | 物品的自定义名称（游戏内实际显示的名字） | `String`  |
+| it.count      | 这个物品对象堆叠的个数                   | `Integer` |
 
 <br>
 
@@ -36,8 +30,7 @@
 ### 设置自定义Lore
 `it.setLore(names)`
 - 参数：
-    1. names : `Array<String,String,...>`
-       
-       要设置的Lore字符串的数组
+    - names : `Array<String,String,...>`  
+      要设置的Lore字符串的数组
 - 返回值：是否设置成功
 - 返回值类型： `Boolean`

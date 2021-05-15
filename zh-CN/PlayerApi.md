@@ -90,7 +90,7 @@
     - msg : `String`  
       待发送的文本  
 
-    - type(可选参数) : `Number`  
+    - type(可选参数) : `Integer`  
       发送的文本消息类型，默认为0
       - 0 Raw 普通消息
       - 1 Chat 聊天消息
@@ -154,12 +154,11 @@
 `pl.getPlayerPermLevel()`
 
 - 返回值：目标玩家的操作权限
-  - 0 : Normal
-  - 1 : Privileged
-  - 2 : AutomationPlayer
-  - 3 : OperatorOnly
-  - 4 : ConsoleOnly  
-- 返回值类型：`Number`
+- 返回值类型：`Integer`
+  - 目标操作权限等级  
+    0 : 普通成员权限  
+    1 : OP权限  
+    4 : OP + 控制台权限  
 
 <br>
 
@@ -169,13 +168,11 @@
 
 - 参数：
 
-  - level : `Number`  
-    目标操作权限等级
-    - 0 : Normal
-    - 1 : Privileged
-    - 2 : AutomationPlayer
-    - 3 : OperatorOnly
-    - 4 : ConsoleOnly  
+  - level : `Integer`  
+    目标操作权限等级  
+    0 : 普通成员权限  
+    1 : OP权限  
+    4 : OP + 控制台权限  
 - 返回值：是否成功修改
 - 返回值类型：`Boolean`
 
@@ -188,7 +185,7 @@
     - name : `String`  
       计分板名称  
 - 返回值：计分板上的数值
-- 返回值类型：`Number`
+- 返回值类型：`Integer`
 
 <br>
 
@@ -199,7 +196,7 @@
     - name : `String`  
       计分板名称  
 
-    - value : `Number`  
+    - value : `Integer`  
       设置的数值  
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
@@ -238,7 +235,7 @@
   - title : `String`  
     自定义血条标题  
 
-  - percent : `Number`  
+  - percent : `Integer`  
     血条中的血量百分比，有效范围为0~100。0为空血条，100为满
 - 返回值：是否成功设置
 - 返回值类型：`Boolean`
@@ -257,8 +254,8 @@
 ### 提高玩家经验等级 
 `pl.addLevel(count)`
 - 参数：
-    - count : `Number`  
-      要提升的经验等级（整数）  
+    - count : `Integer`  
+      要提升的经验等级
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
@@ -272,7 +269,7 @@
   - server : `String`  
     目标服务器IP / 域名
 
-  - port : `Number`  
+  - port : `Integer`  
     目标服务器端口  
 - 返回值：是否成功传送
 - 返回值类型：`Boolean` 
