@@ -11,22 +11,23 @@
 `mc.sendSimpleForm(player,title,content,buttons,callback)`
 
 - 参数：
-    1. player : `Player`  
-       目标玩家对象
-    
-    2. title : `String`  
-       表单标题  
-    
-    3. content : `String`  
-       表单内容
-    
-    4. buttons : `Array<String,String,...>`  
-       各个按钮文本的字符串数组  
-    
-    5. callback : `Function`  
-       玩家选择按钮之后被调用的回调函数。  
-       函数原型：
-    
+
+    - player : `Player`  
+      目标玩家对象
+
+    - title : `String`  
+      表单标题  
+
+    - content : `String`  
+      表单内容
+
+    - buttons : `Array<String,String,...>`  
+      各个按钮文本的字符串数组  
+
+    - callback : `Function`  
+      玩家选择按钮之后被调用的回调函数。  
+      函数原型：
+
 - 返回值：发送的表单ID  
 
 - 返回值类型：`Integer`
@@ -37,25 +38,25 @@
 `mc.sendModelForm(player,title,content,button1,button2,callback)`
 
 - 参数：
-    1. player : `Player`  
-       目标玩家对象
-    
-    2. title : `String`  
-        表单标题  
-        
-    3. content : `String`  
-        表单内容
-        
-    4. button1 : `String`  
-        按钮1文本的字符串  
-        
-    5. button2 : `String`  
-        按钮2文本的字符串  
-        
-    6. callback : `Function`  
-        玩家选择按钮之后被调用的回调函数。  
-        函数原型：
-    
+    - player : `Player`  
+      目标玩家对象
+
+    - title : `String`  
+      表单标题  
+
+    - content : `String`  
+      表单内容
+
+    - button1 : `String`  
+      按钮1文本的字符串  
+
+    - button2 : `String`  
+      按钮2文本的字符串  
+
+    - callback : `Function`  
+      玩家选择按钮之后被调用的回调函数。  
+      函数原型：
+
 - 返回值：发送的表单ID  
 
 - 返回值类型：`Integer`
@@ -66,16 +67,16 @@
 `mc.sendModelForm(player,json,callback)`
 
 - 参数：
-    1. player : `Player`  
-       目标玩家对象
-    
-    2. json : `String`  
-        自定义表单json字符串  
-        
-    3. callback : `Function`  
-        玩家与表单元素互动之后被调用的回调函数。  
-        函数原型：
-    
+    - player : `Player`  
+      目标玩家对象
+
+    - json : `String`  
+      自定义表单json字符串  
+
+    - callback : `Function`  
+      玩家与表单元素互动之后被调用的回调函数。  
+      函数原型：
+
 - 返回值：发送的表单ID  
 
 - 返回值类型：`Integer`  
@@ -86,9 +87,9 @@
 `mc.giveUpForm(id)`
 
 - 参数：
-    1. id : `Integer`  
-       上述这些函数返回的表单ID
-    
+    - id : `Integer`  
+      上述这些函数返回的表单ID
+
 - 返回值：是否成功取消  
 
 - 返回值类型：`Boolean`  
@@ -119,8 +120,8 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 `fm.addLabel(text)`
 
 - 参数：
-    1. text : `String`  
-       一行文本
+    - text : `String`  
+      一行文本
 - 返回值：无 
 
 <br>
@@ -129,11 +130,11 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 `fm.addInput(title,placeholder)`
 - 参数：
 
-    1. title : `String`  
-       输入框描述文本
-       
-    2. placeholder : `String`  
-    输入框内的提示字符
+    - title : `String`  
+      输入框描述文本
+
+    - placeholder : `String`  
+      输入框内的提示字符
 - 返回值：无 
 
 <br>
@@ -142,8 +143,8 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 `fm.addSwitch(title)`
 
 - 参数：
-    1. title : `String`  
-       开关选项描述文本
+    - title : `String`  
+      开关选项描述文本
 - 返回值：无 
 
 <br>
@@ -152,15 +153,15 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 `fm.addDropdown(title,items[,default])`
 - 参数：
 
-    1. title : `String`  
-       下拉菜单描述文本
-       
-    2. items : `Array<String,String,...>`  
-       下拉菜单中的选项文本列表
-       
-    3. default(可选参数) : `Integer`  
-       下拉菜单默认选中的列表项序号。序号从0开始编号  
-       默认为0，即选中列表的第一项
+    - title : `String`  
+      下拉菜单描述文本
+
+    - items : `Array<String,String,...>`  
+      下拉菜单中的选项文本列表
+
+    - default(可选参数) : `Integer`  
+      下拉菜单默认选中的列表项序号。序号从0开始编号  
+      默认为0，即选中列表的第一项
 - 返回值：无 
 
 <br>
@@ -168,15 +169,15 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 #### 向表单内增加一行游标滑块  
 `fm.addSlider(title,length,default)`
 - 参数：
-    1. title : `String`  
-       游标滑块描述文本
-       
-    2. length : `Integer`  
-       游标滑块最大格数
-       
-    3. default(可选参数) : `Integer`  
+    - title : `String`  
+      游标滑块描述文本
+
+    - length : `Integer`  
+      游标滑块最大格数
+
+    - default(可选参数) : `Integer`  
       游标滑块默认初始格数。  
-      默认为0，即处于滑块行的开头
+        默认为0，即处于滑块行的开头
 - 返回值：无 
 
 <br>
@@ -185,15 +186,15 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 `fm.addStepSlider(title,items[,default])`
 
 - 参数：
-    1. title : `String`  
-       步进滑块描述文本
-       
-    2. items : `Array<String,String,...>`  
-       步进滑块的选项文本列表
-       
-    3. default(可选参数) : `Integer`  
-       步进滑块默认初始选项。序号从0开始编号  
-       默认为0，即选中滑块的第一项
+    - title : `String`  
+      步进滑块描述文本
+
+    - items : `Array<String,String,...>`  
+      步进滑块的选项文本列表
+
+    - default(可选参数) : `Integer`  
+      步进滑块默认初始选项。序号从0开始编号  
+      默认为0，即选中滑块的第一项
 - 返回值：无 
 
 <br>
@@ -205,12 +206,12 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 `fm.send(player,callback)`
 
 - 参数：
-    1. player : `Player`  
-       目标玩家对象
-       
-    2. callback : `Function`  
-        玩家与表单元素互动之后被调用的回调函数。  
-        函数原型：
+    - player : `Player`  
+      目标玩家对象
+
+    - callback : `Function`  
+      玩家与表单元素互动之后被调用的回调函数。  
+      函数原型：
 - 返回值：发送的表单ID  
 - 返回值类型：`Integer`
 
