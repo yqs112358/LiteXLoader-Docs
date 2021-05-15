@@ -64,17 +64,18 @@
        x坐标（整数）  
    
     - 成员 `pos.y` : `Number`
-    
+   
     y坐标（整数）  
-    
+   
     - 成员 `pos.z` : `Number`
-    
+   
     z坐标（整数）  
-    
+   
     - 成员 `pos.dim` : `Number`
-    
+   
     维度（整数）：0 主世界，1 下界，2 末地
     > 如果某种情况下维度无效，或者无法获取，你会发现`dim`的值为-1。
+   
    
    
 2. `FloatPos`对象
@@ -86,16 +87,17 @@
        x坐标（实数）  
 
     - 成员 `pos.y` : `Number`
-    
+   
     y坐标（实数）  
-    
+   
     - 成员 `pos.z` : `Number`
-    
+   
     z坐标（实数）  
-    
+   
     - 成员 `pos.dim` : `Number`
-    
+   
     维度（整数）：0 主世界，1 下界，2 末地
+   
     > 如果某种情况下维度无效，或者无法获取，你会发现`dim`的值为-1。
 
 
@@ -113,9 +115,8 @@
 `mc.runcmd(cmd)`
 
 - 参数：
-  1. cmd : `String`
-  
-     待执行的命令  
+  - cmd : `String`  
+    待执行的命令  
 - 返回值：是否执行成功
 - 返回值类型： `Boolean`
 
@@ -126,16 +127,13 @@
 `mc.runcmdEx(cmd)`
 
 - 参数：
-  1. cmd : `String`
-  
-     待执行的命令  
+  - cmd : `String`  
+    待执行的命令  
 - 返回值：结果`Object` 
-  - 成员 result : `Boolean`
-  
+  - 成员 result : `Boolean`  
     表示是否执行成功  
-  
-  - 成员 output : `String`
     
+  - 成员 output : `String`  
     返回BDS执行命令后的输出结果  
 - 返回值类型： `Object<Boolean,String>`
 
@@ -146,10 +144,11 @@
 `mc.runCmdAs(player,cmd)`
 
 - 参数：
-  1. player : `Player`  
-     目标玩家对象  
-  2. cmd : `String`  
-     待执行的命令  
+  - player : `Player`    
+    目标玩家对象  
+
+  - cmd : `String`    
+    待执行的命令  
 - 返回值：是否执行成功
 - 返回值类型： `Boolean`   
 
@@ -160,23 +159,19 @@
 `mc.registerCmd(cmd,description[,level])`
 
 - 参数：
-  1. cmd : `String`
-     
-     待注册的命令
-     
-  2. description : `String`
-  
-     命令描述文本  
-  
-  3. level(可选参数) : `Number`
-  
-     命令的注册等级，默认为4
-  
-      - 0 : Normal
-      - 1 : Privileged
-      - 2 : AutomationPlayer
-      - 3 : OperatorOnly
-      - 4 : ConsoleOnly
+  - cmd : `String`  
+    待注册的命令
+
+  - description : `String`  
+    命令描述文本  
+
+  - level(可选参数) : `Number`  
+    命令的注册等级，默认为4
+    - 0 : Normal
+    - 1 : Privileged
+    - 2 : AutomationPlayer
+    - 3 : OperatorOnly
+    - 4 : ConsoleOnly
 - 返回值：是否成功注册
 - 返回值类型：`Boolean`
 
@@ -186,8 +181,7 @@
 `mc.setServerMotd(motd)`
 
 - 参数：
-    1. motd : `String`
-    
+    - motd : `String`  
       目标Motd字符串  
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
@@ -202,8 +196,7 @@
 `log(data1,data2,...)` (Lua环境下别名：`print`)
 
 - 参数：
-    1. dataN : `任意类型`
-    
+    - dataN : `任意类型`  
       待输出的变量或者数据  
       可以是任意类型，参数数量可以是任意个
 - 返回值：无
@@ -231,33 +224,26 @@
 `system.getTimeObj()`
 
 - 返回值：一个时间对象（`Object`）
-    - 成员 Y : `Number`
-    
+    - 成员 Y : `Number`  
       年份数值（4位）  
-    
-    - 成员 M : `Number`
-    
+      
+    - 成员 M : `Number`  
       月份数值
-    
-    - 成员 D : `Number`
-    
+      
+    - 成员 D : `Number`  
       天数数值
-    
-    - 成员 h : `Number`
-    
+      
+    - 成员 h : `Number`  
       小时数值（24小时制）
-    
-    - 成员 m : `Number`
-    
+      
+    - 成员 m : `Number`  
       分钟数值
-    
-    - 成员 s : `Number`
-    
+      
+    - 成员 s : `Number`  
       秒数值
-    
-    - 成员 ms : `Number`
-    
-      毫秒数值
+      
+    - 成员 ms : `Number`  
+    毫秒数值
 - 返回值类型： `Object<Number,Number,Number,Number,Number,Number,Number>`
 
 <br>
@@ -266,12 +252,11 @@
 `setFutureTask(func,msec)` (Js环境下别名：`setTimeout`)
 
 - 参数：
-    1. func : `Function`
-    
+
+    - func : `Function`  
       待执行的函数
-    
-    2. msec : `Number`
-    
+
+    - msec : `Number`  
       推迟执行的时间（毫秒）
 - 返回值：此任务ID
 - 返回值类型：`Number`
@@ -283,12 +268,11 @@
 `setFutureTask(code,msec)` (Js环境下别名：`setTimeout`)
 
 - 参数：
-    1. code : `String`
-    
+
+    - code : `String`  
       待执行的代码段
-    
-    2. msec : `Number`
-    
+
+    - msec : `Number`  
       推迟执行的时间（毫秒）
 - 返回值：此任务ID
 - 返回值类型：`Number`
@@ -300,12 +284,10 @@
 `setLoopTask(func,msec)` (Js环境下别名：`setInterval`)
 
 - 参数：
-    1. func : `Function`
-    
+    - func : `Function`  
       待执行的函数
-    
-    2. msec : `Number`
-    
+
+    - msec : `Number`  
       执行间隔周期（毫秒）
 - 返回值：此任务ID
 - 返回值类型： `Number`
@@ -317,12 +299,10 @@
 `setLoopTask(code,msec)` (Js环境下别名：`setInterval`)
 
 - 参数：
-    1. code : `String`
-    
+    - code : `String`  
       待执行的代码段
-    
-    2. msec : `Number`
-    
+
+    - msec : `Number`  
       执行间隔周期（毫秒）
 - 返回值：此任务ID
 - 返回值类型： `Number`
@@ -334,8 +314,7 @@
 `cancelTask(taskid)` (Js环境下别名：`clearInterval`)
 
 - 参数：
-    1. timerid : `Number`
-    
+    - timerid : `Number`  
       由前几个函数返回的任务ID
 - 返回值：是否取消成功
 - 返回值类型： `Boolean`
@@ -355,11 +334,11 @@
 `loadPlugin(path)`
 
 - 参数：
-    1. path : `String`
-    
+    - path : `String`  
       要加载的插件文件路径（如`addplugin.js`)
+
     > 只能加载与当前开发语言相同的插件，比如说在js插件中不能动态加载.lua文件
-    
+
 - 返回值：是否启动成功
 
 - 返回值类型： `Boolean`
