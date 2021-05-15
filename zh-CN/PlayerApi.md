@@ -19,10 +19,10 @@
    `mc.getPlayer(info)`
 
    - 参数：
-     - info : `String`  
-       玩家的名字或者Xuid  
+     - `info`  
+       玩家的名字或者Xuid，String类型 
    - 返回值：玩家对象 
-   - 返回值类型：`Player` 
+   - 返回值类型：Player 
      - 如返回值为 `Null` 则表示获取玩家失败
 
    
@@ -33,7 +33,7 @@
    `mc.getPlayerList()`
 
    - 返回值：在线的玩家对象列表
-   - 返回值类型：`Array<Player,Player,...>`  
+   - 返回值类型：Array<Player,Player,...>
 
 <br>
 
