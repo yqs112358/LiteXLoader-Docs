@@ -144,10 +144,10 @@
 `mc.runCmdAs(pl,cmd)`
 
 - 参数：
-  - **Player** pl    
+  - **player** pl    
     目标玩家对象
 
-  - **String** cmd     
+  - **string** cmd     
     待执行的命令 
 - 返回值：是否执行成功
 - 返回值类型： `Boolean`   
