@@ -141,14 +141,14 @@
 
 ### 以指定玩家身份执行一条命令 
 
-`mc.runCmdAs(pl,cmd)`
+`mc.runCmdAs(player,cmd)`
 
 - 参数：
-  - **player** pl    
-    目标玩家对象
+  - player : `Player`    
+    目标玩家对象  
 
-  - **string** cmd     
-    待执行的命令 
+  - cmd -> `String`    
+    待执行的命令  
 - 返回值：是否执行成功
 - 返回值类型： `Boolean`   
 
