@@ -19,14 +19,14 @@
    `mc.getPlayer(info)`
 
    - 参数：
-     1. info : `String`  
-     玩家的名字或者Xuid  
+     - info : `String`  
+       玩家的名字或者Xuid  
    - 返回值：玩家对象 
    - 返回值类型：`Player` 
      - 如返回值为 `Null` 则表示获取玩家失败
+
    
-   
-   
+
 3. 获取**所有在线玩家**的列表  
    此函数会返回一个玩家对象的数组，其中每个对象都对应了一个服务器中的玩家
 
@@ -41,25 +41,20 @@
 
 每一个玩家对象都包含一些固定的对象属性。对于某个特定的玩家对象`pl`，有以下这些属性
 
-- 属性 `pl.name` : `String`
-
-  玩家名
-
-- 属性 `pl.xuid` : `String`
+- `pl.name`  
+  玩家名 ，`String`类型
   
-  玩家Xuid
+- `pl.xuid`  
+  玩家Xuid ，`String`类型
   
-- 属性 `pl.pos` : `FloatPos`
+- `pl.pos`  
+  玩家所在坐标 ，`FloatPos`类型
   
-  玩家所在坐标
+- `pl.realName`  
+  玩家的真实名字（即使改名后也不变），`String` 类型
   
-- 属性 `pl.realName` : `String`
-  
-  玩家的真实名字（即使改名后也不变）
-  
-- 属性 `pl.ip` : `String`
-  
-  玩家设备的IP地址
+- `pl.ip`  
+  玩家设备的IP地址 ，`String` 类型
 
 这些对象属性都是只读的，无法被修改
 
@@ -81,9 +76,8 @@
 `pl.kick([msg])`
 
 - 参数：
-    1. msg(可选参数) : `String`
-    
-       被踢出玩家出显示的断开原因。如果不传入，默认为“正在从服务器断开连接”  
+    - msg(可选参数) : `String`  
+      被踢出玩家出显示的断开原因。如果不传入，默认为“正在从服务器断开连接”  
 - 返回值：是否成功断开连接
 - 返回值类型：`Boolean`
 
@@ -92,21 +86,16 @@
 ### 发送一个文本给玩家  
 `pl.tell(msg[,type])`
 - 参数：
-    1. msg : `String`
-    
-       待发送的文本  
-    
-    2. type(可选参数) : `Number`
 
-       发送的文本消息类型，默认为0
+    - msg : `String`  
+      待发送的文本  
 
-       - 0 Raw 普通消息
-
-       - 1 Chat 聊天消息
-
-       - 5 Tip 物品栏上方的消息
-    
-       - 9 Json Json格式消息
+    - type(可选参数) : `Number`  
+      发送的文本消息类型，默认为0
+      - 0 Raw 普通消息
+      - 1 Chat 聊天消息
+      - 5 Tip 物品栏上方的消息
+      - 9 Json Json格式消息
 - 返回值：是否成功发送
 - 返回值类型：`Boolean`
 
@@ -116,9 +105,8 @@
 `pl.teleport(pos)`
 
 - 参数：
-    1. pos : `FloatPos`
-    
-       目标位置坐标 
+    1. pos : `FloatPos`  
+    目标位置坐标 
 - 返回值：是否成功传送
 - 返回值类型：`Boolean`
 
@@ -138,8 +126,7 @@
 `pl.rename(newname)`
 
 - 参数：
-  1. newname : `String`
-     
+  1. newname : `String`  
      玩家的新名字  
 - 返回值：是否重命名成功
 - 返回值类型：`Boolean`
@@ -182,10 +169,8 @@
 
 - 参数：
 
-  1. level : `Number`
-  
+  1. level : `Number`  
      目标操作权限等级
-  
      - 0 : Normal
   
      - 1 : Privileged
@@ -204,8 +189,7 @@
 `pl.getScoreBoard(name)`
 
 - 参数：
-    1. name : `String`
-       
+    1. name : `String`  
        计分板名称  
 - 返回值：计分板上的数值
 - 返回值类型：`Number`
@@ -216,13 +200,11 @@
 `pl.setScoreBoard(name,value)`
 
 - 参数：
-    1. name : `String`
-       
+    1. name : `String`  
        计分板名称  
        
-    2. value : `Number`
-    
-       设置的数值  
+    2. value : `Number`  
+    设置的数值  
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
@@ -233,13 +215,11 @@
 `pl.setScoreBoard(title,data)`
 
 - 参数：
-  1. title : `String`
-     
+  1. title : `String`  
      侧边栏标题  
      
-  2. data : `Array<String,String,...>`
-  
-     列表字符串数组  
+  2. data : `Array<String,String,...>`  
+  列表字符串数组  
 - 返回值：是否成功设置
 - 返回值类型：`Boolean`
 
@@ -259,13 +239,11 @@
 `pl.setBossBar(title,percent)`
 
 - 参数：
-  1. title : `String`
-     
+  1. title : `String`  
      自定义血条标题  
      
-  2. percent : `Number`
-  
-     血条中的血量百分比，有效范围为0~100。0为空血条，100为满
+  2. percent : `Number`  
+  血条中的血量百分比，有效范围为0~100。0为空血条，100为满
 - 返回值：是否成功设置
 - 返回值类型：`Boolean`
 
@@ -283,8 +261,7 @@
 ### 提高玩家经验等级 
 `pl.addLevel(count)`
 - 参数：
-    1. count : `Number`
-       
+    1. count : `Number`  
        要提升的经验等级（整数）  
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
@@ -296,13 +273,11 @@
 `pl.transServer(server,port)`
 
 - 参数：
-  1. server : `String`
-     
+  1. server : `String`  
      目标服务器IP / 域名
      
-  2. port : `Number`
-  
-     目标服务器端口  
+  2. port : `Number`  
+  目标服务器端口  
 - 返回值：是否成功传送
 - 返回值类型：`Boolean` 
 
