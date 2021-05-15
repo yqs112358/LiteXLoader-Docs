@@ -1,44 +1,39 @@
-# LiteXLoader - 实体 API
-> 对于实体对象，除了可以使用 **通用API** 之外，还有这些额外的功能  
+# LiteXLoader - 实体API
 
-## 实体 API
+> 在LXL中，使用**「实体对象」**来操作和获取某一个实体的相关信息。
 
-### 获取实体名称  
-`getName(entity)`
-- 参数：
-    1. entity : `Pointer`  
-    待查询的实体指针  
-- 返回值：目标实体的名称
-- 返回值类型： `String` 
-    - 如返回值为 `Null` 则表示获取名称失败  
-<br>
+## 获取一个实体对象
 
-### 获取实体坐标  
-`getPos(entity)`
-- 参数：
-    1. entity : `Pointer`  
-    待查询的实体指针  
-- 返回值：目标实体的位置
-- 返回值类型：`FloatPos` 
-    - 如返回值为 `Null` 则表示获取位置失败  
-<br>
+通过注册**事件监听**函数，或者调用某些返回实体对象的**函数**，来获取到BDS给出的实体对象  
+
+
+## 实体对象 - 属性
+
+每一个实体对象都包含一些固定的对象属性。对于某个特定的实体对象`en`，有以下这些属性
+
+- 属性 `en.name` : `String`
+  实体名称
+- 属性 `en.pos` : `FloatPos`
+  实体所在坐标
+
+
+
+## 实体对象 - 函数
+
+每一个实体对象都包含一些可以执行的成员函数（成员方法）。对于某个特定的实体对象`en`，有以下这些函数
 
 ### 传送实体至指定位置  
-`teleport(entity,pos)`
+`en.teleport(pos)`
 - 参数：
-    1. entity : `Pointer`  
-    实体指针
-    2. pos : `FloatPos`  
-    目标位置坐标
+    1. pos : `FloatPos`
+       目标位置坐标
 - 返回值：是否成功传送
-- 返回值类型：`Boolean`   
-<br>
+- 返回值类型：`Boolean`
+
+
 
 ### 杀死指定实体  
-`kill(entity,pos)`
-- 参数：
-    1. entity : `Pointer`  
-    实体指针  
+`en.kill()`
+
 - 返回值：是否成功执行
-- 返回值类型：`Boolean`   
-<br>
+- 返回值类型：`Boolean`
