@@ -57,23 +57,20 @@
 在游戏中，数量众多的 API 都需要提供位置坐标。引擎采用 `IntPos` 和 `FloatPos` 类型的对象来标示坐标，称之为「位置坐标对象」。  
 1. `IntPos`对象
    它的成员均为**整数**，多用来表示**方块坐标**等用整数表示的位置  
-   对于一个 `IntPos` 类型变量 pos：  
+   对于一个 `IntPos` 类型变量 pos，有如下这些属性：  
    
-    - 成员 `pos.x` : `Number`  
-   
+    - pos.x : `Number`  
        x坐标（整数）  
+       
+    - pos.y : `Number`  
+       y坐标（整数）  
    
-    - 成员 `pos.y` : `Number`
+    - pos.z : `Number`  
+      z坐标（整数）  
    
-    y坐标（整数）  
+    - pos.dim : `Number`  
+      维度（整数），0 主世界，1 下界，2 末地
    
-    - 成员 `pos.z` : `Number`
-   
-    z坐标（整数）  
-   
-    - 成员 `pos.dim` : `Number`
-   
-    维度（整数）：0 主世界，1 下界，2 末地
     > 如果某种情况下维度无效，或者无法获取，你会发现`dim`的值为-1。
    
    
@@ -144,10 +141,10 @@
 `mc.runCmdAs(player,cmd)`
 
 - 参数：
-  - player : `Player`    
+  - player : `Player`  
     目标玩家对象  
 
-  - cmd -> `String`    
+  - cmd : `String`  
     待执行的命令  
 - 返回值：是否执行成功
 - 返回值类型： `Boolean`   
@@ -166,12 +163,12 @@
     命令描述文本  
 
   - level(可选参数) : `Number`  
-    命令的注册等级，默认为4
-    - 0 : Normal
-    - 1 : Privileged
-    - 2 : AutomationPlayer
-    - 3 : OperatorOnly
-    - 4 : ConsoleOnly
+    命令的注册等级，默认为4  
+    0 : Normal  
+    1 : Privileged  
+    2 : AutomationPlayer  
+    3 : OperatorOnly  
+    4 : ConsoleOnly
 - 返回值：是否成功注册
 - 返回值类型：`Boolean`
 
