@@ -12,40 +12,65 @@
 
 - 参数：
     1. player : `Player`
-    目标玩家对象
+    
+      目标玩家对象
+    
     2. title : `String`
-    表单标题  
+    
+      表单标题  
+    
     3. content : `String`
-    表单内容
+    
+      表单内容
+    
     4. buttons : `Array<String,String,...>`
-    各个按钮文本的字符串数组  
+    
+      各个按钮文本的字符串数组  
+    
     5. callback : `Function`
-    玩家选择按钮之后被调用的回调函数。
-    函数原型：
+    
+      玩家选择按钮之后被调用的回调函数。
+    
+      函数原型：
 - 返回值：发送的表单ID  
 - 返回值类型：`Number`
 
-
+<br>
 
 ### 向玩家发送模式对话框  
 `mc.sendModelForm(player,title,content,button1,button2,callback)`
 
 - 参数：
     1. player : `Player`
-    目标玩家对象
+    
+      目标玩家对象
+    
     2. title : `String`
+    
         表单标题  
+    
     3. content : `String`
+    
         表单内容
+    
     4. button1 : `String`
+    
         按钮1文本的字符串  
+    
     5. button2 : `String`
+    
         按钮2文本的字符串  
+    
     6. callback : `Function`
+    
         玩家选择按钮之后被调用的回调函数。
+    
         函数原型：
+    
 - 返回值：发送的表单ID  
-- 返回值类型：`Number`  
+
+- 返回值类型：`Number`
+
 <br>
 
 ### 向玩家发送自定义表单（Json格式）  
@@ -53,24 +78,36 @@
 
 - 参数：
     1. player : `Player`
-    目标玩家对象
-    2. json : `String`  
+    
+      目标玩家对象
+    
+    2. json : `String`
+    
         自定义表单json字符串  
-    3. callback : `Function`  
+    
+    3. callback : `Function`
+    
         玩家与表单元素互动之后被调用的回调函数。  
         函数原型：
+    
 - 返回值：发送的表单ID  
+
 - 返回值类型：`Number`  
+
 <br>
 
 ### 取消之前发送的表单  
 `mc.giveUpForm(id)`
 
 - 参数：
-    1. id : `Number`  
-    上述这些函数返回的表单ID
+    1. id : `Number`
+    
+      上述这些函数返回的表单ID
+    
 - 返回值：是否成功取消  
+
 - 返回值类型：`Boolean`  
+
 <br>
 
 ## 表单协助 API
@@ -87,7 +124,7 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 - 返回值：新创建的表单对象
 - 返回值类型：`Form`
 
-
+<br>
 
 ### 添加表单元素
 
@@ -98,83 +135,96 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 
 - 参数：
     1. text : `String`
+       
        文本
 - 返回值：无 
 
-
+<br>
 
 #### 向表单内增加一行输入框  
 `fm.addInput(title,placeholder)`
 - 参数：
 
     1. title : `String`
+       
        输入框描述文本
-
+       
     2. placeholder : `String`
+    
        输入框内的提示字符
 - 返回值：无 
 
-
+<br>
 
 #### 向表单内增加一行开关选项  
 `fm.addSwitch(title)`
 
 - 参数：
     1. title : `String`
+       
        开关选项描述文本
 - 返回值：无 
 
-
+<br>
 
 #### 向表单内增加一行下拉菜单  
 `fm.addDropdown(title,items[,default])`
 - 参数：
 
     1. title : `String`
+       
        下拉菜单描述文本
-
+       
     2. items : `Array<String,String,...>`
-       下拉菜单中的选项文本列表
 
+       下拉菜单中的选项文本列表
+    
     3. default(可选参数) : `Number`
-       下拉菜单默认选中的列表项序号，必须为整数。序号从0开始编号
+    
+       下拉菜单默认选中的列表项序号，必须为整数。  
+       序号从0开始编号
        默认为0，即选中列表的第一项
 - 返回值：无 
 
-
+<br>
 
 #### 向表单内增加一行游标滑块  
 `fm.addSlider(title,length,default)`
 - 参数：
     1. title : `String`
+    
        游标滑块描述文本
-
+    
     2. length : `Number`
-       游标滑块最大格数，必须为整数
 
+       游标滑块最大格数，必须为整数
+    
     3. default(可选参数) : `Number`
-       游标滑块默认初始格数，必须为整数。
-       默认为0，即处于滑块行的开头
+    
+       游标滑块默认初始格数，必须为整数。默认为0，即处于滑块行的开头
 - 返回值：无 
 
-
+<br>
 
 #### 向表单内增加一行步进滑块  
 `fm.addStepSlider(title,items[,default])`
 
 - 参数：
     1. title : `String`
+    
        步进滑块描述文本
-
+    
     2. items : `Array<String,String,...>`
-       步进滑块的选项文本列表
 
+       步进滑块的选项文本列表
+    
     3. default(可选参数) : `Number`
+    
        步进滑块默认初始选项，必须为整数。序号从0开始编号
        默认为0，即选中滑块的第一项
 - 返回值：无 
 
-
+<br>
 
 ### 发送表单
 
@@ -184,9 +234,14 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 
 - 参数：
     1. player : `Player`
+        
         目标玩家对象
+        
     2. callback : `Function`
+    
         玩家与表单元素互动之后被调用的回调函数。
+         
+    
         函数原型：
 - 返回值：发送的表单ID  
 - 返回值类型：`Number`
@@ -194,3 +249,5 @@ LXL提供了**「表单对象」**来方便地创建一个表单并发送至指�
 > 表单对象可以被反复发送，每次发送都会使用一个不同的表单ID，并在互动时调用各自设置好的回调函数，不会打架。
 
 被发送出去的表单同样可以用之前提到的API撤销，传入send函数返回的表单ID即可。
+
+<br>
