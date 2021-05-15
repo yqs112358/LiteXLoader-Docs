@@ -41,19 +41,19 @@
 
 每一个玩家对象都包含一些固定的对象属性。对于某个特定的玩家对象`pl`，有以下这些属性
 
-- `pl.name`  
+- pl.name  
   玩家名 ，`String`类型
   
-- `pl.xuid`  
+- pl.xuid  
   玩家Xuid ，`String`类型
   
-- `pl.pos`  
+- pl.pos  
   玩家所在坐标 ，`FloatPos`类型
   
-- `pl.realName`  
+- pl.realName  
   玩家的真实名字（即使改名后也不变），`String` 类型
   
-- `pl.ip`  
+- pl.ip  
   玩家设备的IP地址 ，`String` 类型
 
 这些对象属性都是只读的，无法被修改
@@ -105,8 +105,8 @@
 `pl.teleport(pos)`
 
 - 参数：
-    1. pos : `FloatPos`  
-    目标位置坐标 
+    - pos : `FloatPos`  
+      目标位置坐标 
 - 返回值：是否成功传送
 - 返回值类型：`Boolean`
 
@@ -126,8 +126,8 @@
 `pl.rename(newname)`
 
 - 参数：
-  1. newname : `String`  
-     玩家的新名字  
+  - newname : `String`  
+    玩家的新名字  
 - 返回值：是否重命名成功
 - 返回值类型：`Boolean`
 
@@ -169,17 +169,13 @@
 
 - 参数：
 
-  1. level : `Number`  
-     目标操作权限等级
-     - 0 : Normal
-  
-     - 1 : Privileged
-  
-     - 2 : AutomationPlayer
-  
-     - 3 : OperatorOnly
-  
-     - 4 : ConsoleOnly  
+  - level : `Number`  
+    目标操作权限等级
+    - 0 : Normal
+    - 1 : Privileged
+    - 2 : AutomationPlayer
+    - 3 : OperatorOnly
+    - 4 : ConsoleOnly  
 - 返回值：是否成功修改
 - 返回值类型：`Boolean`
 
@@ -189,8 +185,8 @@
 `pl.getScoreBoard(name)`
 
 - 参数：
-    1. name : `String`  
-       计分板名称  
+    - name : `String`  
+      计分板名称  
 - 返回值：计分板上的数值
 - 返回值类型：`Number`
 
@@ -200,11 +196,11 @@
 `pl.setScoreBoard(name,value)`
 
 - 参数：
-    1. name : `String`  
-       计分板名称  
-       
-    2. value : `Number`  
-    设置的数值  
+    - name : `String`  
+      计分板名称  
+
+    - value : `Number`  
+      设置的数值  
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
@@ -215,11 +211,11 @@
 `pl.setScoreBoard(title,data)`
 
 - 参数：
-  1. title : `String`  
-     侧边栏标题  
-     
-  2. data : `Array<String,String,...>`  
-  列表字符串数组  
+  - title : `String`  
+    侧边栏标题  
+
+  - data : `Array<String,String,...>`  
+    列表字符串数组  
 - 返回值：是否成功设置
 - 返回值类型：`Boolean`
 
@@ -239,11 +235,11 @@
 `pl.setBossBar(title,percent)`
 
 - 参数：
-  1. title : `String`  
-     自定义血条标题  
-     
-  2. percent : `Number`  
-  血条中的血量百分比，有效范围为0~100。0为空血条，100为满
+  - title : `String`  
+    自定义血条标题  
+
+  - percent : `Number`  
+    血条中的血量百分比，有效范围为0~100。0为空血条，100为满
 - 返回值：是否成功设置
 - 返回值类型：`Boolean`
 
@@ -261,8 +257,8 @@
 ### 提高玩家经验等级 
 `pl.addLevel(count)`
 - 参数：
-    1. count : `Number`  
-       要提升的经验等级（整数）  
+    - count : `Number`  
+      要提升的经验等级（整数）  
 - 返回值：是否设置成功
 - 返回值类型：`Boolean`
 
@@ -273,11 +269,11 @@
 `pl.transServer(server,port)`
 
 - 参数：
-  1. server : `String`  
-     目标服务器IP / 域名
-     
-  2. port : `Number`  
-  目标服务器端口  
+  - server : `String`  
+    目标服务器IP / 域名
+
+  - port : `Number`  
+    目标服务器端口  
 - 返回值：是否成功传送
 - 返回值类型：`Boolean` 
 
