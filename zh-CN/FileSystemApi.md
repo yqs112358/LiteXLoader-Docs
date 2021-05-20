@@ -1,4 +1,4 @@
-# LiteXLoader - 文件系统 API
+# LiteXLoader - 文件和系统 API
 
 [<< 返回目录](README.md)
 
