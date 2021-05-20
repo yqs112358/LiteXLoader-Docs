@@ -81,3 +81,5 @@
 4. 帮助我们宣传LXL，对我们的开发给予支持
 
 有你们，LiteXLoader将变得更好~
+
+#### 欢迎 star⭐！主项目链接：[LiteXLoader](https://github.com/LiteLDev/LiteXLoader)
