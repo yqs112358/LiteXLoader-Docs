@@ -24,49 +24,49 @@
 
   - [通用接口文档 - BaseAPI](BaseApi.md)
 
-    提供 命令注册 和 脚本辅助函数 等基础能力
+    提供命令注册和脚本辅助函数等接口
 
   - [玩家文档 - PlayerAPI](PlayerApi.md)
 
-    提供操作 玩家信息 的能力
+    操作玩家信息的接口
 
   - [实体文档 - EntityAPI](EntityApi.md)
 
-    提供操作 实体信息 的能力
+    操作实体信息的接口
 
   - [方块文档 - BlockAPI](BlockApi.md)
 
-    提供操作 方块信息 的能力
+    操作方块信息的接口
 
   - [物品文档 - ItemAPI](ItemApi.md)
 
-    提供操作 物品栏物品信息 的能力
+    操作物品栏物品信息的接口
 
   - [事件监听文档 - EventAPI](EventApi.md)
 
-    提供 响应游戏事件 的能力
+    响应游戏事件的接口
 
   - [GUI表单界面文档 - GUIAPI](GUIApi.md)
 
-    提供操作和构建游戏内 GUI 表单 的能力
+    操作和构建游戏内 GUI 表单的接口
 
   - [NBT文档 - NBTAPI](NBTApi.md)
 
-    提供操作 NBT数据 的能力
+    操作 NBT 数据的接口
 
 - 脚本辅助
 
   - [文件和系统文档 - FileSystemAPI](FileSystemApi.md)
 
-    提供操作 文件系统 和部分 系统调用 的能力
+    操作文件系统和进行部分系统调用的接口
 
   - [网络文档 - NetworkAPI](NetworkApi.md)
 
-    提供基础的 网络能力
+    基础的网络接口
 
   - [数据库与配置文件文档 - DBAPI](DBApi.md)
 
-    提供操作 数据库 与 配置文件 的能力
+    操作数据库与配置文件的接口
 
 <br>
 
