@@ -113,7 +113,20 @@ but if you modified the framework, or write a new framework based on this framew
 > 特别鸣谢：LiteLDev各位大佬们  
 > 在开发过程中给予了作者以非常大的支持。感谢他们！ 💖💖
 
+## 🎬 参与贡献
+
+我们欢迎你对LiteXLoader做出自己的贡献！  
+你可以通过下面这些方法来为项目做出贡献
+
+1. 贡献代码，维护项目和符号
+2. 帮助修改和优化开发文档
+3. 按格式编写你想要的新API并提交PR，或者提出好的建议
+4. 帮助我们宣传LXL，对我们的开发给予支持
+
+有你们，LiteXLoader将变得更好~
+
 ## 📞 联系我们
+
 LiteXLoader交流群：850517473 [点击加入](https://jq.qq.com/?_wv=1027&k=zeUbrETH)  
 LiteLoader交流群：656669024 [点击加入](https://jq.qq.com/?_wv=1027&k=lagwtrfh)  
 Telegram电报频道：#LiteLoader [点击加入](https://t.me/LiteLoader)  
