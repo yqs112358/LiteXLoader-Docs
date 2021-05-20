@@ -8,7 +8,6 @@
 > --- Minecraft Wiki
 
 这里为脚本提供了操作 **NBT** 数据类型的能力。  
-可以看到，所有的 NBT 相关 API 都被封装进了 nbt 对象中
 
 <br>
 
