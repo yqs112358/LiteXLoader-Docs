@@ -24,7 +24,7 @@
 
   - [通用接口文档 - BaseAPI](BaseApi.md)
 
-    命令注册、脚本辅助函数等
+    命令注册、日志功能等通用接口
 
   - [玩家文档 - PlayerAPI](PlayerApi.md)
 
@@ -82,4 +82,4 @@
 
 有你们，LiteXLoader将变得更好~
 
-#### 欢迎 star⭐！主项目链接：[LiteXLoader](https://github.com/LiteLDev/LiteXLoader)
+#### 欢迎 star⭐ 和 PR！GitHub项目链接：[LiteXLoader](https://github.com/LiteLDev/LiteXLoader)
