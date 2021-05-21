@@ -80,7 +80,6 @@
 
 <br>
 
----
 ## 辅助 API
 这些是在编写脚本过程中到处需要使用到的，起辅助作用的 API  
 
@@ -231,8 +230,6 @@
 
 <br>
 
-------
-
 ## 通用日志接口
 
 以往，按某种格式输出日志到指定位置是一件非常麻烦的事情。  
@@ -242,19 +239,19 @@
 
  ### 通用日志输出
 
-`logger.log(data1,data2,...)` 输出普通文本  
-`logger.debug(data1,data2,...)` 输出调试信息  
-`logger.info(data1,data2,...)`  输出提示信息  
-`logger.warn(data1,data2,...)`  输出警告信息  
-`logger.error(data1,data2,...)`  输出错误信息  
-`logger.fatal(data1,data2,...)`  输出严重错误信息
+`logger.log(data1,data2,...)` -> 输出普通文本  
+`logger.debug(data1,data2,...)` -> 输出调试信息  
+`logger.info(data1,data2,...)`  -> 输出提示信息  
+`logger.warn(data1,data2,...)`  -> 输出警告信息  
+`logger.error(data1,data2,...)`  -> 输出错误信息  
+`logger.fatal(data1,data2,...)`  -> 输出严重错误信息
 
 - 参数：
   - 待输出的变量或者数据  
     可以是任意类型，参数数量可以是任意个
 - 返回值：无
 
-其中，**普通文本**在输出的时候会按照原样输出，而其他的各个输出接口都会在日志内容前面附加上当前时间和日志类型  
+其中，**普通文本**在输出的时候会按照原样输出，而其他的各个输出接口都会在日志内容前面附加上**当前时间和日志类型**  
 例如：你调用`logger.error("Fail to transport the player")`  
 日志输出的结果是 
 
@@ -274,15 +271,14 @@
 - 返回值：无
 
 「标头」为日志输出条目开头的文字，用来直观地区分日志的输出源。  
-例如：设置自定义表头为`logger.setTitle("LiteXLoader")`  
+默认情况下，消息标头默认为空，即输出时没有标头。
+
+例如：设置自定义标头为`logger.setTitle("LiteXLoader")`  
 则在接下来的日志输出将变为形如：  
 
 ```
-[LiteXLoader] [2021-05-21 19:41:03 Error] Fail to transport the player
+[LiteXLoader] [2021-05-21 19:41:03 Error] Fail to transport the player
 ```
-
-
- 注：消息标头默认为空，即默认输出时没有标头。
 
 <br>
 
@@ -340,9 +336,8 @@
 | ------------ | ---------- | --------- | --------- | ---------- | -------------- |
 | 日志类型     | Debug 调试 | Info 提示 | Warn 警告 | Error 错误 | Fatal 严重错误 |
 
-默认最小日志输出等级为0，即输出所有种类的日志
-
-注：普通文本日志`logger.log`将总是被输出，不受这里的影响
+默认最小日志输出等级为0，即输出所有种类的日志  
+除此之外，普通文本日志`logger.log`将总是被输出，不受这里的影响
 
 <br>
 
