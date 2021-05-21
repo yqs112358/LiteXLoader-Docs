@@ -166,6 +166,20 @@
 
 <br>
 
+### `"OnEat"` - 玩家食用食物
+
+- 监听函数原型
+  `function(player,item)`
+- 参数：
+  - player : `Player`  
+    正在吃的玩家对象
+  - item : `Item`  
+    被吃的物品对象
+
+- 拦截事件：不可以拦截
+
+<br>
+
 ### `"OnDestroyBlock"` - 玩家破坏方块
 - 监听函数原型
 `function(player,block,pos)`
@@ -324,6 +338,21 @@
 
 <br>
 
+### `"OnBlockExploded"` - 方块被爆炸破坏
+
+- 监听函数原型
+  `function(block,pos,source)`
+- 参数：
+  - block : `Block`  
+    被爆炸破坏的方块对象
+  - pos : `IntPos`  
+    被爆炸破坏的方块坐标
+  - source : `Entity`  
+    爆炸来源的实体对象
+- 拦截事件：不可以拦截
+
+<br>
+
 ### `"OnCmdBlockExecute"` - 命令方块执行命令
 - 监听函数原型
 `function(cmd,pos)`
@@ -335,6 +364,21 @@
       执行命令的命令方块坐标
 
 - 拦截事件：函数返回`false`
+
+<br>
+
+### `"OnProjectileHit"` - 方块被弹射物击中
+
+- 监听函数原型
+  `function(block,pos,source)`
+- 参数：
+  - block : `Block`  
+    被击中的方块对象
+  - pos : `IntPos`  
+    被击中的方块坐标
+  - source : `Entity`  
+    弹射物来源的实体对象
+- 拦截事件：不可以拦截
 
 <br>
 
