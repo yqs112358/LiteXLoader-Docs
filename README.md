@@ -14,13 +14,12 @@
 > “为什么我要选择LiteXLoader？”
 
 1. **跨语言**脚本插件开发支持   
-  基于开源`ScriptX`框架，借助其强大的抽象能力，`LiteXLoader`支持**多种**不同脚本语言编写的插件同时运行，同时保证面向各种语言的接口统一，带来舒适的开发体验。  
+    基于开源`ScriptX`框架，借助其强大的抽象能力，`LiteXLoader`支持**多种**不同脚本语言编写的插件同时运行，同时保证面向各种语言的接口统一，带来舒适的开发体验。  
   - 目前已支持的插件开发语言：`JavaScript`，`Lua`
   - 即将支持的插件开发语言：`Python`，`Ruby`，`C#`，`TypeScript`  
-    
 2. **开源 & 永久免费**   
-  项目采用`GPL-3.0`开源许可证，保证**永远不会**收费或者推出商业版。  
-  希望社区可以贡献更多的力量，共同参与维护和建设💕    
+    项目采用`GPL-3.0`开源许可证，保证**永远不会**收费或者推出商业版。  
+    希望社区可以贡献更多的力量，共同参与维护和建设💕    
   
 3. **模块化，高性能**  
      1. 使用C++开发，底层性能优越。借助ScriptX的高效率通用接口，Js使用V8引擎，Lua使用原生Lua引擎，让即使是脚本插件也可以做到高效运行。
@@ -43,16 +42,18 @@
 4. Run the building batch below  
 
 #### Build & Link
-- `BuildJs.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Build LiteXRunner for Js
-- `BuildLua.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Build LiteLuaRunner for Lua
-- `BuildAll.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Build All targets above
+- `build/BuildJs.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Build LiteXRunner for Js
+- `build/BuildLua.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Build LiteLuaRunner for Lua
+- `build/BuildAll.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Build All targets above
 
 #### Clean everything generated & Rebuild & Link
-- `ReBuildJs.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;ReBuild LiteXRunner for Js
-- `ReBuildLua.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;ReBuild LiteXRunner for Lua
-- `ReBuildAll.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;ReBuild All targets above
+- `build/ReBuildJs.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;ReBuild LiteXRunner for Js
+- `build/ReBuildLua.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;ReBuild LiteXRunner for Lua
+- `build/ReBuildAll.bat`&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;ReBuild All targets above
 
-##### After building, DLLs will generate at `Release` directory.  
+##### After building, DLLs will generate at `Release` directory.    
+
+##### If you want to get the release zip pack, run `build/PackRelease.bat` and it will generate at `Release` directory.    
 
 ## 💻 安装
 项目主要发布于**MineBBS**，请[移步MineBBS](https://www.minebbs.com/)下载

@@ -37,7 +37,7 @@
 ## 监听事件列表
 目前，LiteXLoader支持如下这些事件的监听。
 
-### `"OnJoin"` - 玩家进入服务器
+### `"onJoin"` - 玩家进入服务器
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -48,7 +48,7 @@
 
 <br>
 
-### `"OnLeft"` - 玩家离开服务器
+### `"onLeft"` - 玩家离开服务器
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -59,7 +59,7 @@
 
 <br>
 
-### `"OnRespawn"` - 玩家重生
+### `"onRespawn"` - 玩家重生
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -70,7 +70,7 @@
 
 <br>
 
-### `"OnChangeDim"` - 玩家切换维度
+### `"onChangeDim"` - 玩家切换维度
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -81,7 +81,21 @@
 
 <br>
 
-### `"OnPlayerCmd"` - 玩家执行命令
+### `"onMove"` - 玩家移动
+
+- 监听函数原型
+  `function(player,pos)`
+- 参数：
+  - player : `Player`  
+    正在移动的玩家对象
+  - pos : `FloatPos`  
+    这个玩家当前的位置
+
+- 拦截事件：不可以拦截
+
+<br>
+
+### `"onPlayerCmd"` - 玩家执行命令
 - 监听函数原型
 `function(player,cmd)`
 - 参数：
@@ -95,7 +109,7 @@
 
 <br>
 
-### `"OnChat"` - 玩家发送聊天信息
+### `"onChat"` - 玩家发送聊天信息
 - 监听函数原型
 `function(player,msg)`
 - 参数：
@@ -109,7 +123,7 @@
 
 <br>
 
-### `"OnAttack"` - 玩家攻击实体
+### `"onAttack"` - 玩家攻击实体
 - 监听函数原型
 `function(player,entiey)`
 - 参数：
@@ -123,7 +137,7 @@
 
 <br>
 
-### `"OnUseItem"` - 玩家使用物品
+### `"onUseItem"` - 玩家使用物品
 - 监听函数原型
 `function(player,item)`
 - 参数：
@@ -137,7 +151,7 @@
 
 <br>
 
-### `"OnTakeItem"` - 玩家捡起物品
+### `"onTakeItem"` - 玩家捡起物品
 - 监听函数原型
 `function(player,item)`
 - 参数：
@@ -152,7 +166,7 @@
 
 <br>
 
-### `"OnDropItem"` - 玩家丢出物品
+### `"onDropItem"` - 玩家丢出物品
 - 监听函数原型
 `function(player,item)`
 - 参数：
@@ -166,7 +180,7 @@
 
 <br>
 
-### `"OnEat"` - 玩家食用食物
+### `"onEat"` - 玩家食用食物
 
 - 监听函数原型
   `function(player,item)`
@@ -180,7 +194,7 @@
 
 <br>
 
-### `"OnDestroyBlock"` - 玩家破坏方块
+### `"onDestroyBlock"` - 玩家破坏方块
 - 监听函数原型
 `function(player,block,pos)`
 - 参数：
@@ -197,7 +211,7 @@
 
 <br>
 
-### `"OnPlaceBlock"` - 玩家放置方块
+### `"onPlaceBlock"` - 玩家放置方块
 - 监听函数原型
 `function(player,block)`
 - 参数：
@@ -214,7 +228,7 @@
 
 <br>
 
-### `"OnOpenChest"` - 玩家打开箱子
+### `"onOpenChest"` - 玩家打开箱子
 - 监听函数原型
 `function(player,pos)`
 - 参数：
@@ -228,7 +242,7 @@
 
 <br>
 
-### `"OnCloseChest"` - 玩家关闭箱子
+### `"onCloseChest"` - 玩家关闭箱子
 - 监听函数原型
 `function(player,pos)`
 - 参数：
@@ -242,7 +256,7 @@
 
 <br>
 
-### `"OnOpenBarrel"` - 玩家打开木桶
+### `"onOpenBarrel"` - 玩家打开木桶
 - 监听函数原型
 `function(player,pos)`
 - 参数：
@@ -256,7 +270,7 @@
 
 <br>
 
-### `"OnCloseBarrel"` - 玩家关闭木桶
+### `"onCloseBarrel"` - 玩家关闭木桶
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -270,7 +284,7 @@
 
 <br>
 
-### `"OnChangeSlot"` - 玩家向容器放入 / 取出物品
+### `"onChangeSlot"` - 玩家向容器放入 / 取出物品
 - 监听函数原型
   `function(player,container,slotNum,isPutIn,item)`
 
@@ -296,7 +310,7 @@
 
 <br>
 
-### `"OnMobDie"` - 生物死亡（包括玩家）
+### `"onMobDie"` - 生物死亡（包括玩家）
 - 监听函数原型
 `function(mob,source)`
 - 参数：
@@ -310,7 +324,7 @@
 
 <br>
 
-### `"OnMobHurt"` - 生物受伤（包括玩家）
+### `"onMobHurt"` - 生物受伤（包括玩家）
 - 监听函数原型
 `function(mob,source)`
 - 参数：
@@ -324,7 +338,7 @@
 
 <br>
 
-### `"OnExplode"` - 发生爆炸
+### `"onExplode"` - 发生爆炸
 - 监听函数原型
 `function(source,pos)`
 - 参数：
@@ -338,7 +352,7 @@
 
 <br>
 
-### `"OnBlockExploded"` - 方块被爆炸破坏
+### `"onBlockExploded"` - 方块被爆炸破坏
 
 - 监听函数原型
   `function(block,pos,source)`
@@ -353,7 +367,7 @@
 
 <br>
 
-### `"OnCmdBlockExecute"` - 命令方块执行命令
+### `"onCmdBlockExecute"` - 命令方块执行命令
 - 监听函数原型
 `function(cmd,pos)`
 - 参数：
@@ -367,7 +381,7 @@
 
 <br>
 
-### `"OnProjectileHit"` - 方块被弹射物击中
+### `"onProjectileHit"` - 方块被弹射物击中
 
 - 监听函数原型
   `function(block,pos,source)`
@@ -382,7 +396,48 @@
 
 <br>
 
-### `"OnServerStarted"` - 服务器启动完毕
+### `"onProjectileHit"` - 方块被弹射物击中
+
+- 监听函数原型
+  `function(block,pos,source)`
+- 参数：
+  - block : `Block`  
+    被击中的方块对象
+  - pos : `IntPos`  
+    被击中的方块坐标
+  - source : `Entity`  
+    弹射物来源的实体对象
+- 拦截事件：不可以拦截
+
+<br>
+
+### `"onPistonPush"` - 活塞推动
+
+- 监听函数原型
+  `function(pistonPos,block)`
+- 参数：
+  - pistonPos : `IntPos`  
+    正在工作的活塞坐标
+  - block : `Block`  
+    被推动的方块对象
+- 拦截事件：函数返回`false`
+
+<br>
+
+### `"onUseRespawnAnchor"` - 玩家使用重生锚
+
+- 监听函数原型
+  `function(player,pos)`
+- 参数：
+  - player : `Player`  
+    使用重生锚的玩家指针
+  - pos : `IntPos`  
+    被使用的重生锚的位置
+- 拦截事件：函数返回`false`
+
+<br>
+
+### `"onServerStarted"` - 服务器启动完毕
 - 监听函数原型
 `function()`
 - 参数：
@@ -391,7 +446,7 @@
 
 <br>
 
-### `"OnServerCmd"` - 服务端执行后台命令
+### `"onServerCmd"` - 服务端执行后台命令
 - 监听函数原型
 `function(cmd)`
 - 参数：
