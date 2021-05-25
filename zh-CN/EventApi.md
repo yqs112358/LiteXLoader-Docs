@@ -95,6 +95,22 @@
 
 <br>
 
+### `"onSetArmor"` - 玩家改变盔甲栏
+
+- 监听函数原型
+  `function(player,slotNum,item)`
+- 参数：
+  - player : `Player`  
+    改变盔甲栏的玩家对象
+  - slotNum : `Number`  
+    盔甲栏序号，范围0-3
+  - item : `Item`  
+    盔甲栏中的物品对象
+
+- 拦截事件：不可以拦截
+
+<br>
+
 ### `"onPlayerCmd"` - 玩家执行命令
 - 监听函数原型
 `function(player,cmd)`
@@ -433,6 +449,19 @@
     使用重生锚的玩家指针
   - pos : `IntPos`  
     被使用的重生锚的位置
+- 拦截事件：函数返回`false`
+
+<br>
+
+### `"onFarmLandDecay"` - 耕地退化
+
+- 监听函数原型
+  `function(pos,entity)`
+- 参数：
+  - pos : `IntPos`  
+    退化的耕地的坐标
+  - entity : `Entity`  
+    造成耕地退化的实体
 - 拦截事件：函数返回`false`
 
 <br>
