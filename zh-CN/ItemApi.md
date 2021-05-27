@@ -20,6 +20,7 @@
 | it.name       | 物品名称                                 | `String`  |
 | it.customName | 物品的自定义名称（游戏内实际显示的名字） | `String`  |
 | it.count      | 这个物品对象堆叠的个数                   | `Integer` |
+| it.aux        | 物品附加值（如羊毛颜色）                 | `Number`  |
 
 这些对象属性都是只读的，无法被修改
 

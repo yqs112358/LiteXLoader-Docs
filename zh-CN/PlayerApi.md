@@ -41,13 +41,15 @@
 
 每一个玩家对象都包含一些固定的对象属性。对于某个特定的玩家对象`pl`，有以下这些属性
 
-| 属性        | 含义                               | 类型       |
-| ----------- | ---------------------------------- | ---------- |
-| pl.name     | 玩家名                             | `String`   |
-| pl.pos      | 玩家所在坐标                       | `FloatPos` |
-| pl.realName | 玩家的真实名字（即使改名后也不变） | `String`   |
-| pl.xuid     | 玩家Xuid                           | `String`   |
-| pl.ip       | 玩家设备的IP地址                   | `String`   |
+| 属性         | 含义                               | 类型       |
+| ------------ | ---------------------------------- | ---------- |
+| pl.name      | 玩家名                             | `String`   |
+| pl.pos       | 玩家所在坐标                       | `FloatPos` |
+| pl.realName  | 玩家的真实名字（即使改名后也不变） | `String`   |
+| pl.xuid      | 玩家Xuid                           | `String`   |
+| pl.ip        | 玩家设备的IP地址                   | `String`   |
+| pl.maxHealth | 玩家最大生命值                     | `Integer`  |
+| pl.health    | 玩家当前生命值                     | `Integer`  |
 
 这些对象属性都是只读的，无法被修改
 
