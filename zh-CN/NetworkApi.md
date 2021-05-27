@@ -32,7 +32,7 @@
 
 ### 发送一个异步HTTP请求  
 
-`network.request(url,method,data[,callback])`
+`network.request(url,method,data,callback)`
 
 - 参数：
   - url : `String`  
