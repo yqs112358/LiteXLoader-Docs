@@ -1,4 +1,4 @@
-# LiteXLoader - 划时代 x 跨语言脚本插件加载器
+# LiteXLoader - 插件开发文档
 
 ## 🎨 简介
 `LiteXLoader`（以下简称**LXL**）是一个基岩版官方服务端`Bedrock Delicated Server`（以下简称**BDS**）的插件框架，提供强大的跨语言脚本插件支持能力和稳定的开发API支持。  
