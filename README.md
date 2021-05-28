@@ -18,7 +18,7 @@ Here is Docs that are necessary for `LiteXLoader` plugins development.
 
 <br>
 
-## 🎬 参与贡献 - Contribute to the project
+## 🎬 参与LXL开发 - Contribute to LXL project
 
 我们欢迎你对LiteXLoader做出自己的贡献！  
 Welcome to your contribution to LiteXLoader !  
