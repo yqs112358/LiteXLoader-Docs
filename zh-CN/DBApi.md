@@ -1,4 +1,4 @@
-# LiteXLoader - 数据库和配置文件 API
+# LiteXLoader - 数据库与配置文件文档 
 
 [<< 返回目录](README.md)
 

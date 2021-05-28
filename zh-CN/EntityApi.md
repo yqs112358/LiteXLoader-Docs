@@ -1,4 +1,4 @@
-# LiteXLoader - 实体API
+# LiteXLoader - 实体文档
 
 [<< 返回目录](README.md)
 

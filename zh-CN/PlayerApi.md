@@ -1,4 +1,4 @@
-# LiteXLoader - 玩家 API
+# LiteXLoader - 玩家文档
 
 [<< 返回目录](README.md)
 

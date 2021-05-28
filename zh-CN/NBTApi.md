@@ -1,4 +1,4 @@
-# LiteXLoader - NBT API
+# LiteXLoader - NBT文档
 
 [<< 返回目录](README.md)
 

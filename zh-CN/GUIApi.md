@@ -1,4 +1,4 @@
-# LiteXLoader - GUI API
+# LiteXLoader - GUI表单界面文档
 
 [<< 返回目录](README.md)
 
@@ -6,13 +6,12 @@
 
 ## 表单相关 API
 
+对于某个特定的玩家对象`pl`，有以下这些表单接口可用
+
 ### 向玩家发送简单表单  
-`mc.sendSimpleForm(player,title,content,buttons,callback)`
+`pl.sendSimpleForm(title,content,buttons,callback)`
 
 - 参数：
-
-    - player : `Player`  
-      目标玩家对象
 
     - title : `String`  
       表单标题  
@@ -34,12 +33,9 @@
 <br>
 
 ### 向玩家发送模式对话框  
-`mc.sendModelForm(player,title,content,button1,button2,callback)`
+`pl.sendModelForm(title,content,button1,button2,callback)`
 
 - 参数：
-    - player : `Player`  
-      目标玩家对象
-
     - title : `String`  
       表单标题  
 
@@ -63,12 +59,9 @@
 <br>
 
 ### 向玩家发送自定义表单（Json格式）  
-`mc.sendModelForm(player,json,callback)`
+`pl.sendModelForm(json,callback)`
 
 - 参数：
-    - player : `Player`  
-      目标玩家对象
-
     - json : `String`  
       自定义表单json字符串  
 
@@ -83,7 +76,7 @@
 <br>
 
 ### 取消之前发送的表单  
-`mc.giveUpForm(id)`
+`mc.cancelForm(id)`
 
 - 参数：
     - id : `Integer`  
@@ -217,7 +210,7 @@ LXL提供了**表单对象**来方便地创建一个表单并发送至指定玩�
 
 > 表单对象可以被反复发送，每次发送都会使用一个不同的表单ID，并在互动时调用各自设置好的回调函数，不会打架。
 
-在这里被发送出去的表单同样可以用之前提到的giveUpForm撤销，传入返回的表单ID即可。
+在这里被发送出去的表单同样可以用之前提到的cancelForm撤销，传入返回的表单ID即可。
 
 <br>
 

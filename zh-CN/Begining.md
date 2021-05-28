@@ -1,4 +1,4 @@
-# LiteXLoader - 划时代 x 跨语言脚本插件加载器
+# LiteXLoader - LXL插件开发文档
 
 [<< 返回目录](README.md)
 
