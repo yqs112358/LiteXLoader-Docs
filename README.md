@@ -9,11 +9,11 @@
 
 <br>
 
-## 🎯 开发文档 & API文档 - Development Docs & API Docs
+## 🎯 插件开发指南 & API文档 - Development Docs & API Docs
 这里是`LiteXLoader`插件开发必读的说明文档  
-👉[点此查看](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main/zh-CN)👈 LXL插件开发文档（中文）
+Here is Docs that are necessary for `LiteXLoader` plugins development.
 
-Here is Docs that are necessary for LiteXLoader plugins development.  
+👉[点击此处](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main/zh-CN)👈 查看 LXL插件开发文档（中文）  
 👉[Click here](https://github.com/yqs112358/LiteXLoader-Docs/tree/main/en)👈 -> Plugin Developing Document (English)
 
 <br>
@@ -21,9 +21,9 @@ Here is Docs that are necessary for LiteXLoader plugins development.
 ## 🎬 参与贡献 - Contribute to the project
 
 我们欢迎你对LiteXLoader做出自己的贡献！  
-👉[点击此处](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main/zh-CN/Maintance)👈查看**项目维护与支持文档**  
-
 Welcome to your contribution to LiteXLoader !  
+
+👉[点击此处](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main/zh-CN/Maintance)👈查看 LXL项目维护与支持文档（中文）   
 👉[Click here](https://github.com/yqs112358/LiteXLoader-Docs/tree/main/en/Maintance)👈 -> Maintance and Technical Docs for LiteXLoader (English)
 
 <br>
