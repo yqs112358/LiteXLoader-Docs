@@ -141,4 +141,4 @@ Hook技术，指的并不是Win中SetWindowsHookEx那一套的钩子系统，而
 
 [点击此处](https://github.com/LiteLDev/LiteXLoader) 前往LiteXLoader项目源码开源地址
 
-[<< 返回起始页](https://github.com/yqs112358/LiteXLoader-Docs/tree/main)
+[<< 返回起始页](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main)
