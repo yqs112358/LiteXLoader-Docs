@@ -44,22 +44,26 @@
 
 ### 注册一个玩家命令  
 
-`mc.registerCmd(cmd,description[,level,callback])`
+`mc.registerCmd(cmd,description,callback[,level])`
 
 - 参数：
   - cmd : `String`  
     待注册的命令
   - description : `String`  
     命令描述文本  
+  - callback : `Function`  
+    注册的这个命令被执行时，接口自动调用的回调函数。  
+    回调函数原型：`function(player,args)`  
+    
+    - player : `Player`  
+      执行命令的玩家对象
+    - args : `Array<String,String...>`    
+      按空格为分界分割，得到的命令字符串数组
+    
+    如果在回调函数中返回`false`，等同于拦截这个命令的执行
   - level : `Integer`  
     （可选参数）命令的注册等级，默认为 0 ，即所有人都可以执行  
     如果设置命令注册等级为1，则只有OP可以执行此命令  
-  - callback : `Function`  
-    （可选参数）注册的这个命令被执行时，接口自动调用的回调函数。回调函数默认为空  
-    回调函数原型：`function(player,args)`  
-    其中，player为执行命令的玩家对象  
-    args为按空格为分界分割得到的命令字符串数组，类型为`Array<String,String...>`    
-    如果在回调函数中返回`false`，等同于拦截这个命令的执行
 - 返回值：是否成功注册
 - 返回值类型：`Boolean`
 
@@ -67,18 +71,22 @@
 
 ### 注册一个后台控制台命令  
 
-`server.registerCmd(cmd,description[,callback])`
+`server.registerCmd(cmd,description,callback)`
 
 - 参数：
   - cmd : `String`  
     待注册的命令
+    
   - description : `String`  
     命令描述文本  
+    
   - callback : `Function`  
-    （可选参数）注册的这个命令被执行时，接口自动调用的回调函数。回调函数默认为空  
-    回调函数原型：`function(player,args)`  
-    其中，player为执行命令的玩家对象  
-    args为按空格为分界分割得到的命令字符串数组，类型为`Array<String,String...>`    
+    注册的这个命令被执行时，接口自动调用的回调函数。  
+    回调函数原型：`function(args)`  
+
+    - args : `Array<String,String...>`    
+      按空格为分界分割，得到的命令字符串数组
+
     如果在回调函数中返回`false`，等同于拦截这个命令的执行
 - 返回值：是否成功注册
 - 返回值类型：`Boolean`
@@ -93,7 +101,7 @@
 如果你的命令中有引号（比如说为了处理含有空格的玩家名字），LXL在分割时也会做处理。
 
 注：在调用回调函数之后，如果你没有拦截，传统的的命令执行事件仍然会被正常触发一次。  
-如果你不喜欢回调函数的这种形式，可以不使用这个参数，继续使用传统的命令监听方式。
+如果你不喜欢回调函数的这种形式，可以在这里设置个空函数，继续使用传统的命令监听方式。
 
 <br>
 
