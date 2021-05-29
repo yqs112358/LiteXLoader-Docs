@@ -45,6 +45,24 @@ ini格式相对**简单直观**，他人修改起来比较轻松，不过储存�
 
 如果配置文件选择的是`Json`格式，你有这些读写接口可用
 
+#### 写入配置项
+
+`conf.set(name,data)`
+
+- 参数：
+  - name : `String`  
+    配置项名字
+  - data : `任意类型`  
+    要写入的配置数据。允许的配置数据类型有：  
+    `Integer` `Float` `String` `Boolean` `Array` `Object`  
+    其中，`Array` 和 `Object` 内部仅能嵌套上面这些元素
+
+- 返回值：是否写入成功
+
+- 返回值类型：`Boolean`
+
+<br>
+
 #### 读取配置项
 
 `conf.get(name[,default])`
@@ -57,24 +75,6 @@ ini格式相对**简单直观**，他人修改起来比较轻松，不过储存�
     默认为`Null`
 - 返回值：指定配置项的数据
 - 返回值类型：`任意类型`，以具体储存的数据类型为准
-
-<br>
-
-#### 写入配置项
-
-`conf.set(name,data)`
-
-- 参数：
-  - name : `String`  
-    配置项名字
-  - data : `任意类型`  
-    要写入的配置数据。允许的配置数据类型有：  
-    `Integer` `Float` `String` `Boolean` `Array` `Object`  
-    其中，`Array` 和 `Object` 内部仅能嵌套上面这些元素
-  
-- 返回值：是否写入成功
-
-- 返回值类型：`Boolean`
 
 <br>
 
@@ -95,6 +95,27 @@ ini格式相对**简单直观**，他人修改起来比较轻松，不过储存�
 ### Ini 格式：读写配置文件
 
 如果配置文件选择的是`ini`格式，你有这些读写接口可用
+
+#### 写入配置项
+
+`conf.setKey(section,name,data)`
+
+- 参数：
+  - section : `String`  
+    配置项键名
+  - name : `String`  
+    配置项名字
+  - data : `任意类型`  
+    要写入的配置数据。允许的配置数据类型有：  
+    `Integer` `Float` `String` `Boolean`
+
+- 返回值：是否写入成功
+
+- 返回值类型：`Boolean`
+
+如果配置项不存在，接口会自动创建
+
+<br>
 
 #### 读取整数项
 
@@ -161,27 +182,6 @@ ini格式相对**简单直观**，他人修改起来比较轻松，不过储存�
     默认为`false`
 - 返回值：指定配置项的数据
 - 返回值类型：`Boolean`
-
-<br>
-
-#### 写入配置项
-
-`conf.setKey(section,name,data)`
-
-- 参数：
-  - section : `String`  
-    配置项键名
-  - name : `String`  
-    配置项名字
-  - data : `任意类型`  
-    要写入的配置数据。允许的配置数据类型有：  
-    `Integer` `Float` `String` `Boolean`
-
-- 返回值：是否写入成功
-
-- 返回值类型：`Boolean`
-
-如果配置项不存在，接口会自动创建
 
 <br>
 

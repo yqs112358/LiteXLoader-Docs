@@ -50,6 +50,7 @@
 | pl.ip        | 玩家设备的IP地址                   | `String`   |
 | pl.maxHealth | 玩家最大生命值                     | `Integer`  |
 | pl.health    | 玩家当前生命值                     | `Integer`  |
+| pl.inAir     | 玩家当前是否悬空                   | `Boolean`  |
 
 这些对象属性都是只读的，无法被修改
 
@@ -102,7 +103,7 @@
 
 ### 以这个玩家身份执行一条命令 
 
-`mc.runcmdAs(cmd)`
+`pl.runcmdAs(cmd)`
 
 - 参数：
   - cmd : `String`  

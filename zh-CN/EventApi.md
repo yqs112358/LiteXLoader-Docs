@@ -37,7 +37,9 @@
 ## 监听事件列表
 目前，LiteXLoader支持如下这些事件的监听。
 
-### `"onJoin"` - 玩家进入服务器
+### 玩家相关事件
+
+#### `"onJoin"` - 玩家进入服务器
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -48,7 +50,7 @@
 
 <br>
 
-### `"onLeft"` - 玩家离开服务器
+#### `"onLeft"` - 玩家离开服务器
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -59,7 +61,7 @@
 
 <br>
 
-### `"onRespawn"` - 玩家重生
+#### `"onRespawn"` - 玩家重生
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -70,7 +72,7 @@
 
 <br>
 
-### `"onChangeDim"` - 玩家切换维度
+#### `"onChangeDim"` - 玩家切换维度
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -81,37 +83,7 @@
 
 <br>
 
-### `"onMove"` - 玩家移动
-
-- 监听函数原型
-  `function(player,pos)`
-- 参数：
-  - player : `Player`  
-    正在移动的玩家对象
-  - pos : `FloatPos`  
-    这个玩家当前的位置
-
-- 拦截事件：不可以拦截
-
-<br>
-
-### `"onSetArmor"` - 玩家改变盔甲栏
-
-- 监听函数原型
-  `function(player,slotNum,item)`
-- 参数：
-  - player : `Player`  
-    改变盔甲栏的玩家对象
-  - slotNum : `Number`  
-    盔甲栏序号，范围0-3
-  - item : `Item`  
-    盔甲栏中的物品对象
-
-- 拦截事件：不可以拦截
-
-<br>
-
-### `"onPlayerCmd"` - 玩家执行命令
+#### `"onPlayerCmd"` - 玩家执行命令
 - 监听函数原型
 `function(player,cmd)`
 - 参数：
@@ -125,7 +97,7 @@
 
 <br>
 
-### `"onChat"` - 玩家发送聊天信息
+#### `"onChat"` - 玩家发送聊天信息
 - 监听函数原型
 `function(player,msg)`
 - 参数：
@@ -139,7 +111,7 @@
 
 <br>
 
-### `"onAttack"` - 玩家攻击实体
+#### `"onAttack"` - 玩家攻击实体
 - 监听函数原型
 `function(player,entiey)`
 - 参数：
@@ -153,7 +125,7 @@
 
 <br>
 
-### `"onUseItem"` - 玩家使用物品
+#### `"onUseItem"` - 玩家使用物品
 - 监听函数原型
 `function(player,item)`
 - 参数：
@@ -167,7 +139,7 @@
 
 <br>
 
-### `"onTakeItem"` - 玩家捡起物品
+#### `"onTakeItem"` - 玩家捡起物品
 - 监听函数原型
 `function(player,item)`
 - 参数：
@@ -182,7 +154,7 @@
 
 <br>
 
-### `"onDropItem"` - 玩家丢出物品
+#### `"onDropItem"` - 玩家丢出物品
 - 监听函数原型
 `function(player,item)`
 - 参数：
@@ -196,7 +168,7 @@
 
 <br>
 
-### `"onEat"` - 玩家食用食物
+#### `"onEat"` - 玩家食用食物
 
 - 监听函数原型
   `function(player,item)`
@@ -210,7 +182,7 @@
 
 <br>
 
-### `"onDestroyBlock"` - 玩家破坏方块
+#### `"onDestroyBlock"` - 玩家破坏方块
 - 监听函数原型
 `function(player,block,pos)`
 - 参数：
@@ -227,7 +199,7 @@
 
 <br>
 
-### `"onPlaceBlock"` - 玩家放置方块
+#### `"onPlaceBlock"` - 玩家放置方块
 - 监听函数原型
 `function(player,block)`
 - 参数：
@@ -244,7 +216,7 @@
 
 <br>
 
-### `"onOpenChest"` - 玩家打开箱子
+#### `"onOpenChest"` - 玩家打开箱子
 - 监听函数原型
 `function(player,pos)`
 - 参数：
@@ -258,7 +230,7 @@
 
 <br>
 
-### `"onCloseChest"` - 玩家关闭箱子
+#### `"onCloseChest"` - 玩家关闭箱子
 - 监听函数原型
 `function(player,pos)`
 - 参数：
@@ -272,7 +244,7 @@
 
 <br>
 
-### `"onOpenBarrel"` - 玩家打开木桶
+#### `"onOpenBarrel"` - 玩家打开木桶
 - 监听函数原型
 `function(player,pos)`
 - 参数：
@@ -286,7 +258,7 @@
 
 <br>
 
-### `"onCloseBarrel"` - 玩家关闭木桶
+#### `"onCloseBarrel"` - 玩家关闭木桶
 - 监听函数原型
 `function(player)`
 - 参数：
@@ -300,7 +272,7 @@
 
 <br>
 
-### `"onChangeSlot"` - 玩家向容器放入 / 取出物品
+#### `"onChangeSlot"` - 玩家向容器放入 / 取出物品
 - 监听函数原型
   `function(player,container,slotNum,isPutIn,item)`
 
@@ -326,7 +298,52 @@
 
 <br>
 
-### `"onMobDie"` - 生物死亡（包括玩家）
+#### `"onMove"` - 玩家移动
+
+- 监听函数原型
+  `function(player,pos)`
+- 参数：
+  - player : `Player`  
+    正在移动的玩家对象
+  - pos : `FloatPos`  
+    这个玩家当前的位置
+
+- 拦截事件：不可以拦截
+
+<br>
+
+#### `"onSetArmor"` - 玩家改变盔甲栏
+
+- 监听函数原型
+  `function(player,slotNum,item)`
+- 参数：
+  - player : `Player`  
+    改变盔甲栏的玩家对象
+  - slotNum : `Integer`  
+    盔甲栏序号，范围0-3
+  - item : `Item`  
+    盔甲栏中的物品对象
+
+- 拦截事件：不可以拦截
+
+<br>
+
+#### `"onUseRespawnAnchor"` - 玩家使用重生锚
+
+- 监听函数原型
+  `function(player,pos)`
+- 参数：
+  - player : `Player`  
+    使用重生锚的玩家指针
+  - pos : `IntPos`  
+    被使用的重生锚的位置
+- 拦截事件：函数返回`false`
+
+<br>
+
+### 实体相关事件
+
+#### `"onMobDie"` - 生物死亡（包括玩家）
 - 监听函数原型
 `function(mob,source)`
 - 参数：
@@ -340,7 +357,7 @@
 
 <br>
 
-### `"onMobHurt"` - 生物受伤（包括玩家）
+#### `"onMobHurt"` - 生物受伤（包括玩家）
 - 监听函数原型
 `function(mob,source)`
 - 参数：
@@ -354,7 +371,7 @@
 
 <br>
 
-### `"onExplode"` - 发生爆炸
+#### `"onExplode"` - 发生爆炸
 - 监听函数原型
 `function(source,pos)`
 - 参数：
@@ -368,7 +385,9 @@
 
 <br>
 
-### `"onBlockExploded"` - 方块被爆炸破坏
+### 方块相关事件
+
+#### `"onBlockExploded"` - 方块被爆炸破坏
 
 - 监听函数原型
   `function(block,pos,source)`
@@ -383,7 +402,7 @@
 
 <br>
 
-### `"onCmdBlockExecute"` - 命令方块执行命令
+#### `"onCmdBlockExecute"` - 命令方块执行命令
 - 监听函数原型
 `function(cmd,pos)`
 - 参数：
@@ -397,7 +416,7 @@
 
 <br>
 
-### `"onProjectileHit"` - 方块被弹射物击中
+#### `"onProjectileHit"` - 方块被弹射物击中
 
 - 监听函数原型
   `function(block,pos,source)`
@@ -412,7 +431,7 @@
 
 <br>
 
-### `"onProjectileHit"` - 方块被弹射物击中
+#### `"onProjectileHit"` - 方块被弹射物击中
 
 - 监听函数原型
   `function(block,pos,source)`
@@ -427,7 +446,11 @@
 
 <br>
 
-### `"onPistonPush"` - 活塞推动
+#### `"onHopperSearchItem"` - 漏斗检测可否吸取物品
+
+<br>
+
+#### `"onPistonPush"` - 活塞推动
 
 - 监听函数原型
   `function(pistonPos,block)`
@@ -440,20 +463,7 @@
 
 <br>
 
-### `"onUseRespawnAnchor"` - 玩家使用重生锚
-
-- 监听函数原型
-  `function(player,pos)`
-- 参数：
-  - player : `Player`  
-    使用重生锚的玩家指针
-  - pos : `IntPos`  
-    被使用的重生锚的位置
-- 拦截事件：函数返回`false`
-
-<br>
-
-### `"onFarmLandDecay"` - 耕地退化
+#### `"onFarmLandDecay"` - 耕地退化
 
 - 监听函数原型
   `function(pos,entity)`
@@ -466,7 +476,19 @@
 
 <br>
 
-### `"onServerStarted"` - 服务器启动完毕
+### 其他事件
+
+#### `"onScoreChanged"` - 计分板数值改变
+
+- 监听函数原型
+  `function()`
+- 参数：
+  - 无
+- 拦截事件：不可以拦截
+
+<br>
+
+#### `"onServerStarted"` - 服务器启动完毕
 - 监听函数原型
 `function()`
 - 参数：
@@ -475,7 +497,7 @@
 
 <br>
 
-### `"onServerCmd"` - 服务端执行后台命令
+#### `"onServerCmd"` - 服务端执行后台命令
 - 监听函数原型
 `function(cmd)`
 - 参数：

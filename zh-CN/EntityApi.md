@@ -15,12 +15,13 @@
 
 每一个实体对象都包含一些固定的对象属性。对于某个特定的实体对象`en`，有以下这些属性
 
-| 属性         | 含义           | 类型       |
-| ------------ | -------------- | ---------- |
-| en.name      | 实体名称       | `String`   |
-| en.pos       | 实体所在坐标   | `FloatPos` |
-| en.maxHealth | 实体最大生命值 | `Integer`  |
-| en.health    | 实体当前生命值 | `Integer`  |
+| 属性         | 含义             | 类型       |
+| ------------ | ---------------- | ---------- |
+| en.name      | 实体名称         | `String`   |
+| en.pos       | 实体所在坐标     | `FloatPos` |
+| en.maxHealth | 实体最大生命值   | `Integer`  |
+| en.health    | 实体当前生命值   | `Integer`  |
+| en.inAir     | 实体当前是否悬空 | `Boolean`  |
 
 这些对象属性都是只读的，无法被修改
 
@@ -32,6 +33,7 @@
 
 ### 传送实体至指定位置  
 `en.teleport(pos)`
+
 - 参数：
     - pos : `FloatPos`  
       目标位置坐标
