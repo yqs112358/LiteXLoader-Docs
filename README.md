@@ -1,4 +1,4 @@
-# LiteXLoader - LXL插件开发文档  Plugin Development Docs
+# LiteXLoader - LXL帮助中心  LXL Assistance Center
 
 [![GitHub license](https://img.shields.io/github/license/LiteLDev/LiteXLoader)](https://github.com/LiteLDev/LiteXLoader/blob/main/LICENSE)
 [![Build](https://img.shields.io/badge/build-passing-brightgreen)](#)
@@ -14,8 +14,8 @@
 这里介绍了如何为BDS服务端安装`LiteXLoader`加载器，以及如何安装LXL插件  
 Here is an introduction about how to install `LiteXLoader` into BDS and how to install LXL plugins
 
-👉[点击此处](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main/zh-CN)👈 查看 LXL安装和使用文档（中文）  
-👉[Click here](https://github.com/yqs112358/LiteXLoader-Docs/tree/main/en)👈 -> LXL installation and usage Document (English)
+👉[点击此处](zh-CN/Usage/)👈 查看 LXL安装和使用文档（中文）  
+👉[Click here](en/Usage/)👈 -> LXL Installation and Usage Document (English)
 
 <br>
 
@@ -23,18 +23,18 @@ Here is an introduction about how to install `LiteXLoader` into BDS and how to i
 这里是`LiteXLoader`插件开发必读的说明文档  
 Here is Docs that are necessary for `LiteXLoader` plugins development
 
-👉[点击此处](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main/zh-CN)👈 查看 LXL插件开发文档（中文）  
-👉[Click here](https://github.com/yqs112358/LiteXLoader-Docs/tree/main/en)👈 -> Plugin Developing Document (English)
+👉[点击此处](zh-CN/)👈 查看 LXL插件开发文档（中文）  
+👉[Click here](en/)👈 -> Plugin Developing Document (English)
 
 <br>
 
-## 🎬 参与LXL开发 - Contribute to LXL project
+## 🎬 参与LXL项目 - Contribute to LXL project
 
-我们欢迎你对LiteXLoader做出自己的贡献！  
+我们欢迎你对`LiteXLoader`做出自己的贡献！  
 Welcome to your contribution to LiteXLoader !  
 
-👉[点击此处](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main/zh-CN/Maintance)👈查看 LXL项目维护与支持文档（中文）   
-👉[Click here](https://github.com/yqs112358/LiteXLoader-Docs/tree/main/en/Maintance)👈 -> Maintance and Technical Docs for LiteXLoader (English)
+👉[点击此处](zh-CN/Maintance/)👈查看 LXL项目维护与支持文档（中文）   
+👉[Click here](en/Maintance/)👈 -> Maintance and Technical Docs for LiteXLoader (English)
 
 <br>
 
