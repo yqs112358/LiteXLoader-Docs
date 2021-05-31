@@ -9,9 +9,19 @@
 
 <br>
 
+## 🔨 LXL安装指南 & 插件安装指南 - Installation of LXL and plugins
+
+这里介绍了如何为BDS服务端安装`LiteXLoader`加载器，以及如何安装LXL插件  
+Here is an introduction about how to install `LiteXLoader` into BDS and how to install LXL plugins
+
+👉[点击此处](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main/zh-CN)👈 查看 LXL安装和使用文档（中文）  
+👉[Click here](https://github.com/yqs112358/LiteXLoader-Docs/tree/main/en)👈 -> LXL installation and usage Document (English)
+
+<br>
+
 ## 🎯 插件开发指南 & API文档 - Development Docs & API Docs
 这里是`LiteXLoader`插件开发必读的说明文档  
-Here is Docs that are necessary for `LiteXLoader` plugins development.
+Here is Docs that are necessary for `LiteXLoader` plugins development
 
 👉[点击此处](https://gitee.com/yqs112358/LiteXLoader-Docs/tree/main/zh-CN)👈 查看 LXL插件开发文档（中文）  
 👉[Click here](https://github.com/yqs112358/LiteXLoader-Docs/tree/main/en)👈 -> Plugin Developing Document (English)

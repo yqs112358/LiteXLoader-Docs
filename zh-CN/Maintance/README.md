@@ -31,7 +31,7 @@ LXL开发之初的想法，便是依靠跨语言引擎的支持，整合多种�
 
 ### 模块化，兼容性
 
-LXL最重要的思想，就是将各重要功能模块化，方便于后续的维护和子项目的升级。各模块之间尽量降低耦合度，方便进行维护和功能新增。
+LXL最重要的思想，就是将各重要功能模块化，方便于后续的维护和子项目的升级。基于模块化的设计思想，LXL将底层加载器接口、多种脚本引擎后端、插件加载模块互相分离，保证各个部分可以单独维护升级，各模块之间尽量降低耦合度，方便进行修改和功能新增。
 
 `LiteXLoader`的架构，可以从此图一眼看出：
 
@@ -52,26 +52,26 @@ LXL最重要的思想，就是将各重要功能模块化，方便于后续的�
 上述的架构落实到实际项目中，项目目录结构如图所示：
 
 ```
-├───build		- 构建脚本所在地
-├───engine		- 各脚本引擎的头文件和静态库
+├───build			- 构建脚本所在地
+├───engine			- 各脚本引擎的头文件和静态库
 │   ├───Lua
 │   └───V8
-├───libs		- 底层加载器库
+├───libs			- 底层加载器库
 │   └───LiteLoader
-├───LiteXLoader.Js	- 构建中间目录，cmake在里面 
-├───LiteXLoader.Lua	- 构建中间目录，cmake在里面 
-├───Release		- 构建最终产物目录，包括DLL和各依赖库
-│   ├───RuntimesLibs	- 脚本引擎依赖库 
+├───LiteXLoader.Js		- 构建中间目录，cmake在里面 
+├───LiteXLoader.Lua		- 构建中间目录，cmake在里面 
+├───Release			- 构建最终产物目录，包括DLL和各依赖库
+│   ├───RuntimesLibs		- 脚本引擎依赖库 
 │   │   └───Js
-│   └───ScriptBaseLibs	- LXL脚本基础库
-├───src			- LXL源码目录
-│   ├───API		- APIs接口层
-│   ├───Kernel		- Kernel内核抽象层
-│   ├───LiteLoader	- 底层加载器头文件
+│   └───ScriptBaseLibs		- LXL脚本基础库
+├───src				- LXL源码目录
+│   ├───API			- APIs接口层
+│   ├───Kernel			- Kernel内核抽象层
+│   ├───LiteLoader		- 底层加载器头文件
 │   │   └───headers
-│   ├───Minini		- 第三方ini解析库
-│   ├───Nlohmann	- 第三方json解析库
-│   └───ScriptX		- ScriptX项目目录
+│   ├───Minini			- 第三方ini解析库
+│   ├───Nlohmann		- 第三方json解析库
+│   └───ScriptX			- ScriptX项目目录
 └───test
 ```
 
@@ -94,7 +94,9 @@ Hook技术，指的并不是Win中SetWindowsHookEx那一套的钩子系统，而
 由于相关维护需要较强的技术能力，这方面的社区人才一直处于较为匮乏的状态。  
 因此，如果你有兴趣参与项目的维护和贡献代码，我们绝对非常欢迎
 
+<br>
 
+### 如果您。。。
 
 ####  C++ 开发技术相对欠缺，但我希望对项目做出贡献
 
@@ -124,6 +126,14 @@ Hook技术，指的并不是Win中SetWindowsHookEx那一套的钩子系统，而
 
 当然，更欢迎各位向`LiteLoader`项目和`ScriptX`项目做出贡献。他们是LiteXLoader赖以发展的重要支持。  
 只要你愿意，开源社区的大门将永远向你敞开！
+
+<br>
+
+### 具体维护方法举例
+
+按照当前的程序架构和代码排布，针对特定的一些维护需求，为大家指明方向
+
+#### 维护
 
 <br>
 

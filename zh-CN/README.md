@@ -25,40 +25,28 @@ LXL的API大致分为两个部分：和游戏相关的API，以及用于辅助�
 
 - 游戏相关接口
 
-  - [通用接口文档 - BaseAPI](BaseApi.md)  
-    通用模块：命令注册、日志功能等通用接口
+  - [游戏接口文档 - Game API](GameApi.md)  
+    通用接口模块：注册命令、操作游戏元素等
     
-  - [玩家文档 - PlayerAPI](PlayerApi.md)  
-    玩家模块
+  - [事件监听文档 - Event API](EventApi.md)  
+    事件接口模块：响应游戏事件并做出相应的反应
   
-  - [实体文档 - EntityAPI](EntityApi.md)  
-    实体模块
-    
-  - [方块文档 - BlockAPI](BlockApi.md)  
-    方块模块
-  
-  - [物品文档 - ItemAPI](ItemApi.md)  
-    物品栏物品模块
-    
-  - [事件监听文档 - EventAPI](EventApi.md)  
-    事件模块：响应游戏事件、监听事件
-  
-  - [GUI表单界面文档 - GUIAPI](GUIApi.md)  
+  - [GUI表单界面文档 - GUI API](GuiApi.md)  
     可视化模块：操作和构建游戏内 GUI 表单
     
-  - [NBT文档 - NBTAPI](NBTApi.md)  
+  - [NBT文档 - NBT API](NbtApi.md)  
     NBT模块：操作 NBT 数据
-
-- 脚本辅助接口
-
-  - [文件和系统文档 - FileSystemAPI](FileSystemApi.md)  
-    文件系统模块：操作文件系统、进行部分系统调用
-    
-  - [网络文档 - NetworkAPI](NetworkApi.md)  
-    网络模块：基础的网络接口
   
-  - [数据库与配置文件文档 - DBAPI](DBApi.md)  
-    数据模块：操作数据库、配置文件、内置经济系统
+- 脚本强化接口
+
+  - [脚本辅助文档 - Script API](ScriptApi.md)  
+    辅助接口模块：重要辅助功能，包括日志功能、异步接口等
+    
+  - [系统功能接口文档 - System API](SystemApi.md)  
+    系统功能模块：对接底层系统接口，包括操作文件系统、访问网络等
+  
+  - [数据库与配置文件文档 - DB API](DBApi.md)  
+    数据处理模块：处理大量数据，包括操作数据库、配置文件、经济系统等
 
 <br>
 
